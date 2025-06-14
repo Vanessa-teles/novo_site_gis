@@ -9,8 +9,10 @@ class ContatoForm(forms.Form):
     mensagem = forms.CharField(label=_("Descreva sua necessidade"), widget=forms.Textarea())
     telefone = forms.CharField(label=_("Telefone"), max_length=15)
     cidade = forms.CharField(label=_("Endereço do imóvel"), max_length=100)
+    # Mantemos o CharField aqui, mas poderíamos usar ChoiceField se quiséssemos validar as opções no backend
     service = forms.CharField(label=_("Serviço"), max_length=100)
 
+    # Mapeamento dos valores do formulário para os textos completos
     SERVICE_CHOICES_MAP = {
         "entrega": "Vistoria de Entrega de Chaves",
         "sindico": "Vistoria para Síndicos",
@@ -19,27 +21,27 @@ class ContatoForm(forms.Form):
     }
 
     def send_mail(self):
-        """Método CORRETO para enviar e-mail"""
         nome = self.cleaned_data["nome"]
         email = self.cleaned_data["email"]
         assunto = self.cleaned_data["assunto"]
         mensagem = self.cleaned_data["mensagem"]
         cidade = self.cleaned_data["cidade"]
         telefone = self.cleaned_data["telefone"]
-        service_value = self.cleaned_data["service"]
-        
+        service_value = self.cleaned_data["service"] # Valor curto vindo do HTML (ex: "entrega")
+
+        # Busca o texto completo correspondente ao valor curto, ou usa o próprio valor se não encontrar
         service_full_text = self.SERVICE_CHOICES_MAP.get(service_value, service_value)
 
-        conteudo = f"""
-        NOVO CONTATO VIA E-MAIL
-        Nome do Cliente: {nome}
-        Email informado para contato: {email}
-        Cidade: {cidade}
-        Telefone informado para contato: {telefone}
-        Serviço solicitado: {service_full_text}
-        Assunto: {assunto}
-        Mensagem: {mensagem}
-        """
+        n = _(nome)
+        e = _(email)
+        a = _(assunto)
+        m = _(mensagem)
+        c = _(cidade)
+        t = _(telefone)
+        # Usamos o texto completo do serviço no e-mail
+        s = _(service_full_text)
+
+        conteudo = f"NOVO CONTATO VIA E-MAIL\nNome do Cliente: {n}\nEmail informado para contato: {e}\nCidade: {c}\nTelefone informado para contato: {t}\nServiço solicitado: {s}\nAssunto: {a}\nMensagem: {m}\n"
 
         mail = EmailMessage(
             subject=f"Novo contato: {assunto}",
@@ -49,8 +51,6 @@ class ContatoForm(forms.Form):
             headers={"Reply-To": email}
         )
         mail.send()
-
-# NÃO coloque return ou print aqui fora da classe/função
         # O print abaixo está fora do método e com indentação incorreta, será ignorado.
         # Se for para debug, mova para dentro do método com indentação correta.
-    # print("Mensagem enviada")
+        # print("Mensagem enviada")
