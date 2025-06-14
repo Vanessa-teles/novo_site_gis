@@ -1,5 +1,10 @@
 from django.shortcuts import render, redirect
+from django.contrib import messages
+from django.urls import reverse
 from .forms import ContatoForm
+
+def index(request):
+    return render(request, 'core/index.html')
 
 def contato(request):
     if request.method == 'POST':
@@ -16,3 +21,5 @@ def contato(request):
         form = ContatoForm()
     
     return render(request, 'seu_template.html', {'form': form})
+
+from django.core.mail import send_mail, EmailMessage
