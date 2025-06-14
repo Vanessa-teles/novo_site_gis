@@ -41,7 +41,7 @@ class ContatoForm(forms.Form):
         Mensagem: {mensagem}
         """
 
-        send_mail(
+        mail = EmailMessage(
             subject=f"Novo contato: {assunto}",
             body=conteudo,
             from_email="gislaine.teles.eng@gmail.com", # Considere mover para settings.py
