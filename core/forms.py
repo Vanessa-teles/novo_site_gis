@@ -19,38 +19,43 @@ class ContatoForm(forms.Form):
     }
 
     def send_mail(self):
-        """Método CORRETO para enviar e-mail"""
-        nome = self.cleaned_data["nome"]
-        email = self.cleaned_data["email"]
-        assunto = self.cleaned_data["assunto"]
-        mensagem = self.cleaned_data["mensagem"]
-        cidade = self.cleaned_data["cidade"]
-        telefone = self.cleaned_data["telefone"]
-        service_value = self.cleaned_data["service"]
-        
-        service_full_text = self.SERVICE_CHOICES_MAP.get(service_value, service_value)
+        """Método para enviar e-mail com tratamento completo"""
+        try:
+            # Coleta de dados
+            nome = self.cleaned_data["nome"]
+            email = self.cleaned_data["email"]
+            assunto = self.cleaned_data["assunto"]
+            mensagem = self.cleaned_data["mensagem"]
+            cidade = self.cleaned_data["cidade"]
+            telefone = self.cleaned_data["telefone"]
+            service_value = self.cleaned_data["service"]
+            
+            service_full_text = self.SERVICE_CHOICES_MAP.get(service_value, service_value)
 
-        conteudo = f"""
-        NOVO CONTATO VIA E-MAIL
-        Nome do Cliente: {nome}
-        Email informado para contato: {email}
-        Cidade: {cidade}
-        Telefone informado para contato: {telefone}
-        Serviço solicitado: {service_full_text}
-        Assunto: {assunto}
-        Mensagem: {mensagem}
-        """
+            # Corpo do e-mail formatado
+            conteudo = f"""
+            NOVO CONTATO - {assunto}
+            Nome: {nome}
+            E-mail: {email}
+            Telefone: {telefone}
+            Cidade: {cidade}
+            Serviço: {service_full_text}
+            Mensagem:
+            {mensagem}
+            """
 
-        mail = EmailMessage(
-            subject=f"Novo contato: {assunto}",
-            body=conteudo,
-            from_email="gislaine.teles.eng@gmail.com", # Considere mover para settings.py
-            to=["gislaine_teles@outlook.com"], # Considere mover para settings.py
-            headers={"Reply-To": email}
-        )
-        mail.send()
-
-        # NÃO coloque return ou print aqui fora da classe/função
-        # O print abaixo está fora do método e com indentação incorreta, será ignorado.
-        # Se for para debug, mova para dentro do método com indentação correta.
-        # print("Mensagem enviada")
+            # Envio usando send_mail (que funcionou no shell)
+            result = send_mail(
+                subject=f"Contato do Site: {assunto}",
+                message=conteudo,
+                from_email=settings.EMAIL_HOST_USER,
+                recipient_list=[settings.EMAIL_DESTINO],
+                fail_silently=False
+            )
+            
+            # Retorna True se o e-mail foi enviado com sucesso
+            return result == 1
+            
+        except Exception as e:
+            print(f"ERRO NO ENVIO: {str(e)}")  # Log para debug
+            return False

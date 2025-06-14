@@ -101,11 +101,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Email settings
+# Configurações de e-mail
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'gislaine.teles.eng@gmail.com'
-EMAIL_HOST_PASSWORD = 'd r w p i k p m c z x d w o v b'
 EMAIL_USE_TLS = True
-EMAIL_USE_SSL = False
+EMAIL_HOST_USER = 'gislaine.teles.eng@gmail.com'
+EMAIL_HOST_PASSWORD = 'd r w p i k p m c z x d w o v b'  # Senha de app gerada
+EMAIL_DESTINO = ['gislaine_teles@outlook.com']
+DEFAULT_FROM_EMAIL = 'gislaine.teles.eng@gmail.com'
