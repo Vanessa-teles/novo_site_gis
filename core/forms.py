@@ -42,7 +42,7 @@ class ContatoForm(forms.Form):
         s = _(service_full_text)
 
         conteudo = f"NOVO CONTATO VIA E-MAIL\nNome do Cliente: {n}\nEmail informado para contato: {e}\nCidade: {c}\nTelefone informado para contato: {t}\nServiço solicitado: {s}\nAssunto: {a}\nMensagem: {m}\n"
-
+    
         mail = EmailMessage(
             subject=f"Novo contato: {assunto}",
             body=conteudo,
