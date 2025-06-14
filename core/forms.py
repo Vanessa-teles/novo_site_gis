@@ -18,8 +18,8 @@ class ContatoForm(forms.Form):
         "outro": "Outro serviço",
     }
 
-    def send_email(self):
-        """Envia e-mail com os dados do formulário"""
+    def send_mail(self):
+        """Método CORRETO para enviar e-mail"""
         nome = self.cleaned_data["nome"]
         email = self.cleaned_data["email"]
         assunto = self.cleaned_data["assunto"]

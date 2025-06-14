@@ -12,7 +12,7 @@ def contato(request):
         if form.is_valid():
             try:
                 # Chamando sendEmail() (com E maiúsculo)
-                if form.send_mail():  # Agora com o nome correto
+                if form.send_mail():  # Note o underline
                     messages.success(request, 'E-mail enviado com sucesso!')
                 else:
                     messages.error(request, 'Falha ao enviar e-mail')
@@ -21,6 +21,6 @@ def contato(request):
                 messages.error(request, f'Erro ao enviar e-mail: {str(e)}')
                 return redirect(reverse('contato'))
     
-    return render(request, 'core/contato.html')
+    return render(request, 'core/contato.html', {'form': ContatoForm()})
 
 from django.core.mail import send_mail, EmailMessage
