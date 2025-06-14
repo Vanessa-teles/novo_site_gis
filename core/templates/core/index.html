@@ -1,0 +1,232 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Vistorias Técnicas Especializadas - Eng. Gislaine Teles{% endblock %}
+
+{% block content %}
+<!-- Banner / Hero Section -->
+<section id="banner" class="hero-section">
+    <div class="hero-content">
+        <h1>Proteja seu investimento com vistorias técnicas especializadas</h1>
+        <p>Evite prejuízos na entrega do seu imóvel e garanta a segurança do seu condomínio com laudos técnicos profissionais</p>
+        <ul class="actions special">
+            <li><a href="{% url 'contato' %}" class="button primary large">Agende sua vistoria agora</a></li>
+            <li><a href="https://wa.me/5511985796256/?text=Olá, gostaria de saber mais informações sobre seus serviços." class="button alt large"><i class="fab fa-whatsapp"></i> Fale pelo WhatsApp</a></li>
+        </ul>
+    </div>
+</section>
+
+<!-- Main -->
+<section id="main" class="container">
+
+    <section class="box special">
+        <header class="major">
+            <h2>Vistorias Técnicas Especializadas para sua Segurança e Tranquilidade</h2>
+            <p>Identificamos problemas que passam despercebidos aos olhos leigos, garantindo seus direitos e evitando dores de cabeça futuras</p>
+        </header>
+        
+        <div class="benefits-bar">
+            <div class="benefit-item">
+                <i class="fas fa-check-circle"></i>
+                <span>+5 anos de experiência</span>
+            </div>
+            <div class="benefit-item">
+                <i class="fas fa-home"></i>
+                <span>+100 imóveis vistoriados</span>
+            </div>
+            <div class="benefit-item">
+                <i class="fas fa-file-alt"></i>
+                <span>Laudos técnicos detalhados</span>
+            </div>
+            <div class="benefit-item">
+                <i class="fas fa-award"></i>
+                <span>Engenheira especializada</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="box special features">
+        <div class="features-row">
+            <section class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-key"></i>
+                </div>
+                <h3>Vistoria de Entrega de Chaves</h3>
+                <p><strong>Não receba seu imóvel com problemas!</strong> Nossa vistoria técnica identifica falhas construtivas, acabamentos inadequados, instalações defeituosas e divergências do projeto antes que você assine o termo de recebimento.</p>
+                <ul class="service-list">
+                    <li><i class="fas fa-check"></i> Verificação completa de acabamentos</li>
+                    <li><i class="fas fa-check"></i> Teste de instalações elétricas e hidráulicas</li>
+                    <li><i class="fas fa-check"></i> Análise de esquadrias e vedações</li>
+                    <li><i class="fas fa-check"></i> Documentação fotográfica detalhada</li>
+                    <li><i class="fas fa-check"></i> Relatório técnico para construtora</li>
+                </ul>
+                <p class="service-price">Investimento a partir de R$ XXX,XX</p>
+                <a href="{% url 'contato' %}" class="button alt">Solicitar orçamento</a>
+            </section>
+            <section class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-building"></i>
+                </div>
+                <h3>Vistoria para Síndicos</h3>
+                <p><strong>Proteja seu condomínio e os moradores!</strong> Nossas vistorias técnicas para áreas comuns identificam problemas estruturais, infiltrações e falhas que podem comprometer a segurança e valorização do patrimônio.</p>
+                <ul class="service-list">
+                    <li><i class="fas fa-check"></i> Inspeção de áreas comuns</li>
+                    <li><i class="fas fa-check"></i> Identificação de patologias construtivas</li>
+                    <li><i class="fas fa-check"></i> Verificação de sistemas prediais</li>
+                    <li><i class="fas fa-check"></i> Orientação para manutenções preventivas</li>
+                    <li><i class="fas fa-check"></i> Suporte técnico para assembleias</li>
+                </ul>
+                <a href="{% url 'contato' %}" class="button alt">Solicitar orçamento</a>
+            </section>
+        </div>
+        <div class="features-row">
+            <section class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-file-signature"></i>
+                </div>
+                <h3>Laudos Técnicos Especializados</h3>
+                <p><strong>Documentação técnica com respaldo legal!</strong> Elaboramos laudos técnicos detalhados para diversas finalidades, com ART (Anotação de Responsabilidade Técnica) e toda a documentação necessária.</p>
+                <ul class="service-list">
+                    <li><i class="fas fa-check"></i> Laudos de inspeção predial</li>
+                    <li><i class="fas fa-check"></i> Laudos de infiltração e umidade</li>
+                    <li><i class="fas fa-check"></i> Laudos para ações judiciais</li>
+                    <li><i class="fas fa-check"></i> Laudos para seguradoras</li>
+                    <li><i class="fas fa-check"></i> Projetos estruturais corretivos</li>
+                </ul>
+                <a href="{% url 'contato' %}" class="button alt">Solicitar orçamento</a>
+            </section>
+            <section class="service-card cta-card">
+                <div class="cta-content">
+                    <h3>Não deixe para depois!</h3>
+                    <p>Problemas construtivos identificados tardiamente podem gerar custos muito maiores. Agende sua vistoria hoje mesmo e garanta tranquilidade e economia.</p>
+                    <a href="{% url 'contato' %}" class="button primary large">Agendar vistoria</a>
+                    <p class="small-text">Ou ligue: <strong>(11) 98579-6256</strong></p>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="box special">
+        <header>
+            <h3>O que nossos clientes dizem</h3>
+        </header>
+        <div class="testimonials">
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <p>"A vistoria na entrega do meu apartamento identificou mais de 30 problemas que eu jamais teria percebido. A construtora corrigiu tudo antes da mudança!"</p>
+                </div>
+                <div class="testimonial-author">
+                    <p><strong>Maria S.</strong> - Cliente de vistoria de entrega de chaves</p>
+                </div>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <p>"Como síndico, o laudo técnico da Gislaine foi fundamental para resolvermos problemas estruturais no condomínio e planejar manutenções preventivas."</p>
+                </div>
+                <div class="testimonial-author">
+                    <p><strong>Carlos M.</strong> - Síndico de condomínio residencial</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="box special">
+        <header>
+            <h3>Perguntas Frequentes</h3>
+        </header>
+        <div class="faq-container">
+            <div class="faq-item">
+                <h4>Por que preciso de uma vistoria na entrega do meu imóvel?</h4>
+                <p>A vistoria técnica identifica problemas construtivos que podem não ser visíveis a olho nu, mas que podem causar transtornos futuros. Após a assinatura do termo de recebimento, a construtora pode se eximir da responsabilidade de corrigir esses problemas.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Quanto tempo dura uma vistoria de entrega de chaves?</h4>
+                <p>Dependendo do tamanho do imóvel, a vistoria pode durar de 2 a 4 horas. É um investimento de tempo que pode economizar meses de dor de cabeça e milhares de reais em reparos.</p>
+            </div>
+            <div class="faq-item">
+                <h4>O que acontece se forem encontrados problemas no imóvel?</h4>
+                <p>Elaboramos um relatório técnico detalhado com todas as não-conformidades encontradas, documentação fotográfica e recomendações. Este documento é entregue à construtora para que os problemas sejam solucionados antes da assinatura do termo de recebimento.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Quais documentos recebo após a vistoria?</h4>
+                <p>Você recebe um laudo técnico completo com registro fotográfico, descrição detalhada dos problemas encontrados, recomendações técnicas e ART (Anotação de Responsabilidade Técnica) que dá respaldo legal ao documento.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <div class="row box">
+        <div class="col-3 col-12-mobilep">
+            <div>
+                <span class="image"> <img style="width: 110%; height: auto; float: none; border-radius: 50%;" src="{% static 'core/images/engenheira.jpg' %}" alt="Engenheira Gislaine Teles"/></span>
+            </div>
+        </div>
+        <div class="col-9 col-12-mobilep">
+            <h3>Sobre a Engenheira</h3>
+            <p>Gislaine Teles é uma engenheira civil pós-graduada em Engenharia Diagnóstica e Documentação Legal, com mais de 5 anos de experiência em vistorias técnicas e laudos especializados.</p>
+            <p>Com expertise em identificação de problemas construtivos em condomínios e residências, já realizou mais de 100 vistorias técnicas, ajudando proprietários a garantirem seus direitos e síndicos a manterem seus condomínios seguros e valorizados.</p>
+            <ul class="credentials-list">
+                <li><i class="fas fa-graduation-cap"></i> Pós-graduação em Engenharia Diagnóstica</li>
+                <li><i class="fas fa-id-card"></i> CREA nº XXXXX</li>
+                <li><i class="fas fa-certificate"></i> Especialista em vistorias e laudos técnicos</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="box special">
+        <header>
+            <h3>Entre em contato</h3>
+            <p>Preencha o formulário abaixo para solicitar um orçamento ou agendar sua vistoria</p>
+        </header>
+        <form method="post" action="{% url 'contato' %}" class="contact-form">
+            {% csrf_token %}
+            <div class="row gtr-50 gtr-uniform">
+                <div class="col-6 col-12-mobilep">
+                    <input type="text" name="nome" id="nome" placeholder="Nome completo" required />
+                </div>
+                <div class="col-6 col-12-mobilep">
+                    <input type="email" name="email" id="email" placeholder="Email" required />
+                </div>
+                <div class="col-6 col-12-mobilep">
+                    <input type="text" name="telefone" id="telefone" placeholder="Telefone/WhatsApp" required />
+                </div>
+                <div class="col-6 col-12-mobilep">
+                    <input type="text" name="cidade" id="cidade" placeholder="Cidade" required />
+                </div>
+                <div class="col-12">
+                    <input type="text" name="assunto" id="assunto" placeholder="Assunto" required />
+                </div>
+                <div class="col-12">
+                    <textarea name="mensagem" id="mensagem" placeholder="Descreva sua necessidade" rows="5" required></textarea>
+                </div>
+                <div class="col-12">
+                    <ul class="actions special">
+                        <li><input type="submit" value="Enviar mensagem" class="button primary large" /></li>
+                    </ul>
+                </div>
+                <div class="col-12 text-center">
+                    {% if messages %}
+                        {% for message in messages %}
+                        <h4 style="text-align: center;" class="{{ message.tags }} {% if message.tags %} {% endif %}"> {{ message }} </h4>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="box special cta-final">
+        <h3>Proteja seu investimento com uma vistoria profissional</h3>
+        <p>Não deixe para depois! Problemas construtivos identificados tardiamente podem gerar custos muito maiores.</p>
+        <ul class="actions special">
+            <li><a href="{% url 'contato' %}" class="button primary large">Agendar vistoria agora</a></li>
+            <li><a href="https://wa.me/5511985796256/?text=Olá, gostaria de saber mais informações sobre seus serviços." class="button alt large"><i class="fab fa-whatsapp"></i> Falar pelo WhatsApp</a></li>
+        </ul>
+    </section>
+
+</section>
+{% endblock content %}

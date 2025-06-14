@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<title>{% block title %}Vistorias Técnicas Especializadas - Eng. Gislaine Teles{% endblock %}</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="{% static 'core/css/main.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'core/css/custom.css' %}">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+	</head>
+	<body class="landing is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+			<header id="header" class="alt">
+				<a style="text-decoration: none; border: none;" href="{% url 'index' %}"><img style="width: 10%; min-width: 80px;" src="{% static 'core/images/logo-placeholder.png' %}" alt="Logo" /></a>
+				<nav id="nav">
+					<ul>
+						<li><a href="tel:+5511985796256" class="phone-header"><i class="fas fa-phone"></i> (11) 98579-6256</a></li>
+						<li><a href="{% url 'contato' %}" class="button primary cta-header">Agende sua vistoria</a></li>
+					</ul>
+				</nav>
+			</header>
+
+            {% block content %}
+          
+            {% endblock content %}
+            
+            <!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="https://www.instagram.com/eng.gislaineteles" class="icon brands fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
+					<li><a href="https://www.linkedin.com/in/gislaine-teles-/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+					<li><a href="mailto:gislaine.teles.eng@gmail.com" class="icon fa-envelope"><span class="label">Email</span></a></li>
+					<li><a href="https://wa.me/5511985796256/?text=Olá, gostaria de saber mais informações sobre seus serviços." class="icon brands fa-whatsapp" target="_blank"><span class="label">WhatsApp</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Gislaine Teles. Todos os direitos reservados.</li>
+					<li>CREA nº XXXXX</li>
+					<li>Tel: (11) 98579-6256</li>
+				</ul>
+			</footer>
+
+			<!-- WhatsApp Floating Button -->
+			<a href="https://wa.me/5511985796256/?text=Olá, gostaria de saber mais informações sobre seus serviços." class="whatsapp-float" target="_blank">
+				<i class="fab fa-whatsapp"></i>
+			</a>
+
+		</div>
+
+		<!-- Scripts -->
+		<script src="{% static 'core/js/jquery.min.js' %}"></script>
+		<script src="{% static 'core/js/jquery.dropotron.min.js' %}"></script>
+		<script src="{% static 'core/js/jquery.scrollex.min.js' %}"></script>
+		<script src="{% static 'core/js/browser.min.js' %}"></script>
+		<script src="{% static 'core/js/breakpoints.min.js' %}"></script>
+		<script src="{% static 'core/js/util.js' %}"></script>
+		<script src="{% static 'core/js/main.js' %}"></script>
+
+	</body>
+</html>

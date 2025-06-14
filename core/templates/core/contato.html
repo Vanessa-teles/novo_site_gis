@@ -1,0 +1,89 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Contato - Gislaine Teles Engenharia{% endblock %}
+
+{% block content %}
+<!-- Banner / Hero Section -->
+<section id="banner" class="hero-section contact-hero">
+    <div class="hero-content">
+        <h1>Entre em contato</h1>
+        <p>Solicite um orçamento ou agende sua vistoria técnica especializada</p>
+    </div>
+</section>
+
+<!-- Main -->
+<section class="container medium">
+    <div class="box" style="margin-top: -50px;">
+        <h2>Entre em contato via E-mail</h2>
+        <form method="post" action="{% url 'contato' %}" class="contact-form">
+            {% csrf_token %}
+            <div class="row gtr-50 gtr-uniform">
+                <div class="col-6 col-12-mobilep">
+                    <input type="text" name="nome" id="nome" value="" placeholder="Nome" required />
+                </div>
+                <div class="col-6 col-12-mobilep">
+                    <input type="email" name="email" id="email" value="" placeholder="E-mail" required />
+                </div>
+                <div class="col-6">
+                    <input type="text" name="telefone" id="telefone" value="" placeholder="Telefone" required />
+                </div>
+                <div class="col-6">
+                    <input type="text" name="cidade" id="cidade" value="" placeholder="Cidade" required />
+                </div>
+                <div class="col-12">
+                    <input type="text" name="assunto" id="assunto" value="" placeholder="Assunto" required />
+                </div>
+                <div class="col-12">
+                    <textarea name="mensagem" id="mensagem" placeholder="Mande sua mensagem" rows="6" required></textarea>
+                </div>
+                <div class="col-12">
+                    <ul class="actions special">
+                        <li><input type="submit" value="Enviar e-mail" class="button primary large" /></li>
+                    </ul>
+                </div>
+                <div class="col-12 text-center">
+                    {% if messages %}
+                        {% for message in messages %}
+                        <h4 style="text-align: center;" class="{{ message.tags }} {% if message.tags %} {% endif %}"> {{ message }} </h4>
+                        {% endfor %}
+                    {% endif %}
+                </div> 
+            </div>
+        </form>
+        
+        <div class="row" style="margin-top: 3em;">
+            <div class="col-12">
+                <h2 style="text-align: center;">Ou, envie um WhatsApp!</h2>
+                <div style="text-align: center; margin: 2em 0;">
+                    <a href="https://wa.me/5511985796256/?text=Olá, gostaria de saber mais informações sobre seus serviços." 
+                    class="button alt large" target="_blank"><i class="fab fa-whatsapp"></i> Falar pelo WhatsApp</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-6 col-12-mobilep">
+                <div class="contact-info-box box">
+                    <h3><i class="fas fa-map-marker-alt"></i> Endereço</h3>
+                    <p>São Paulo - SP</p>
+                    <h3><i class="fas fa-phone"></i> Telefone</h3>
+                    <p>(11) 98579-6256</p>
+                    <h3><i class="fas fa-envelope"></i> E-mail</h3>
+                    <p>gislaine.teles.eng@gmail.com</p>
+                </div>
+            </div>
+            <div class="col-6 col-12-mobilep">
+                <div class="contact-info-box box">
+                    <h3><i class="far fa-clock"></i> Horário de Atendimento</h3>
+                    <p>Segunda a Sexta: 8h às 18h<br>
+                    Sábados: 8h às 12h</p>
+                    <h3><i class="fas fa-info-circle"></i> Informações</h3>
+                    <p>CREA nº XXXXX<br>
+                    Atendimento em toda a Grande São Paulo</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
