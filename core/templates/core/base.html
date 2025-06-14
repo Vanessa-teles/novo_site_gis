@@ -3,6 +3,23 @@
 <html lang="pt-br">
 	<head>
 		<title>{% block title %}Vistorias Técnicas Especializadas - Eng. Gislaine Teles{% endblock %}</title>
+<!-- Favicon -->
+		<link rel="apple-touch-icon" sizes="57x57" href="{% static 'core/images/apple-icon-57x57.png' %}">
+		<link rel="apple-touch-icon" sizes="60x60" href="{% static 'core/images/apple-icon-60x60.png' %}">
+		<link rel="apple-touch-icon" sizes="72x72" href="{% static 'core/images/apple-icon-72x72.png' %}">
+		<link rel="apple-touch-icon" sizes="76x76" href="{% static 'core/images/apple-icon-76x76.png' %}">
+		<link rel="apple-touch-icon" sizes="114x114" href="{% static 'core/images/apple-icon-114x114.png' %}">
+		<link rel="apple-touch-icon" sizes="120x120" href="{% static 'core/images/apple-icon-120x120.png' %}">
+		<link rel="apple-touch-icon" sizes="144x144" href="{% static 'core/images/apple-icon-144x144.png' %}">
+		<link rel="apple-touch-icon" sizes="152x152" href="{% static 'core/images/apple-icon-152x152.png' %}">
+		<link rel="apple-touch-icon" sizes="180x180" href="{% static 'core/images/apple-icon-180x180.png' %}">
+		<link rel="icon" type="image/png" sizes="192x192" href="{% static 'core/images/android-icon-192x192.png' %}">
+		<link rel="icon" type="image/png" sizes="32x32" href="{% static 'core/images/favicon-32x32.png' %}">
+		<link rel="icon" type="image/png" sizes="96x96" href="{% static 'core/images/favicon-96x96.png' %}">
+		<link rel="icon" type="image/png" sizes="16x16" href="{% static 'core/images/favicon-16x16.png' %}">
+		<link rel="manifest" href="{% static 'core/images/manifest.json' %}">
+		<meta name="msapplication-TileColor" content="#ffffff">
+
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" type="text/css" href="{% static 'core/css/main.css' %}">
@@ -14,12 +31,8 @@
 
 			<!-- Header -->
 			<header id="header" class="alt">
-				<a style="text-decoration: none; border: none;" href="{% url 'index' %}"><img style="width: 10%; min-width: 80px;" src="{% static 'core/images/logo-placeholder.png' %}" alt="Logo" /></a>
+				<a style="text-decoration: none; border: none;" href="{% url 'index' %}"><img style="width: 10%; min-width: 80px;" src="{% static 'core/images/novo-logo.png' %}" alt="Logo" /></a>
 				<nav id="nav">
-					<ul>
-						<li><a href="tel:+5511985796256" class="phone-header"><i class="fas fa-phone"></i> (11) 98579-6256</a></li>
-						<li><a href="{% url 'contato' %}" class="button primary cta-header">Agende sua vistoria</a></li>
-					</ul>
 				</nav>
 			</header>
 
@@ -28,18 +41,23 @@
             {% endblock content %}
             
             <!-- Footer -->
-			<footer id="footer">
-				<ul class="icons">
-					<li><a href="https://www.instagram.com/eng.gislaineteles" class="icon brands fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
-					<li><a href="https://www.linkedin.com/in/gislaine-teles-/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
-					<li><a href="mailto:gislaine.teles.eng@gmail.com" class="icon fa-envelope"><span class="label">Email</span></a></li>
-					<li><a href="https://wa.me/5511985796256/?text=Olá, gostaria de saber mais informações sobre seus serviços." class="icon brands fa-whatsapp" target="_blank"><span class="label">WhatsApp</span></a></li>
-				</ul>
-				<ul class="copyright">
-					<li>&copy; Gislaine Teles. Todos os direitos reservados.</li>
-					<li>CREA nº XXXXX</li>
-					<li>Tel: (11) 98579-6256</li>
-				</ul>
+			<footer style="background-color: #f5f5f5; padding: 2rem 0; text-align: center; margin-top: 3rem; width: 100%;">
+				<div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+					<div style="display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1rem;">
+						<a href="https://www.instagram.com/eng.gislaineteles" target="_blank" style="color: #1a5f7a; font-size: 1.5rem; text-decoration: none;">
+							<i class="fab fa-instagram"></i>
+						</a>
+						<a href="mailto:gislaine.teles.eng@gmail.com" style="color: #1a5f7a; font-size: 1.5rem; text-decoration: none;">
+							<i class="fas fa-envelope"></i>
+						</a>
+						<a href="https://wa.me/5511985796256/?text=Olá, gostaria de saber mais informações sobre seus serviços." target="_blank" style="color: #1a5f7a; font-size: 1.5rem; text-decoration: none;">
+							<i class="fab fa-whatsapp"></i>
+						</a>
+					</div>
+					<div style="font-size: 0.9rem; color: #777; text-align: center;">
+						&copy; Gislaine Teles. Todos os direitos reservados. CREA nº 5070847342-SP
+					</div>
+				</div>
 			</footer>
 
 			<!-- WhatsApp Floating Button -->
@@ -48,7 +66,6 @@
 			</a>
 
 		</div>
-
 		<!-- Scripts -->
 		<script src="{% static 'core/js/jquery.min.js' %}"></script>
 		<script src="{% static 'core/js/jquery.dropotron.min.js' %}"></script>
@@ -57,6 +74,5 @@
 		<script src="{% static 'core/js/breakpoints.min.js' %}"></script>
 		<script src="{% static 'core/js/util.js' %}"></script>
 		<script src="{% static 'core/js/main.js' %}"></script>
-
 	</body>
 </html>
