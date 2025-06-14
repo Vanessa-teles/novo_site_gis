@@ -337,7 +337,7 @@ a:hover {
   color: var(--accent-color);
 }
 
-/* Contact Form */
+/* Formulário de contato */
 .contact-form {
   margin-top: 2em;
 }
@@ -409,7 +409,7 @@ a:hover {
   color: var(--primary-color);
 }
 
-/* Footer Enhancements */
+/* Melhorias no rodapé */
 #footer {
   padding: 4em 0 3em 0;
   background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
@@ -584,8 +584,8 @@ a:hover {
   text-align: center;
 }
 
-/* Mobile First Approach */
-/* Base styles are now mobile-first */
+/* Abordagem Mobile First */
+/* Os estilos base agora priorizam dispositivos móveis */
 #header {
   padding: 0.8em 0;
 }
