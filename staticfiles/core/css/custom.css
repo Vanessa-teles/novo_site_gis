@@ -62,6 +62,15 @@ a:hover {
   padding: 0.8em 2em;
 }
 
+/* Ajuste para a foto redonda */
+.image img[style*="border-radius: 50%"] {
+  max-width: 150px !important; /* Reduz o tamanho máximo da imagem */
+  margin: 0 auto;
+  display: block;
+  border-radius: 50% !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 /* Header Enhancements */
 #header {
   background-color: white;
