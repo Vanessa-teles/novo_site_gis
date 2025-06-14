@@ -11,15 +11,16 @@ def contato(request):
         form = ContatoForm(request.POST)
         if form.is_valid():
             try:
-                # Chamando o método send_email (não send_mail)
-                form.send_email()
-                return redirect('pagina_de_sucesso')  # Redireciona após envio
+                # Chamando sendEmail() (com E maiúsculo)
+                if form.sendEmail():  # Agora com o nome correto
+                    messages.success(request, 'E-mail enviado com sucesso!')
+                else:
+                    messages.error(request, 'Falha ao enviar e-mail')
+                return redirect(reverse('contato'))
             except Exception as e:
-                # Adiciona erro ao formulário para mostrar ao usuário
-                form.add_error(None, f'Erro ao enviar mensagem: {str(e)}')
-    else:
-        form = ContatoForm()
+                messages.error(request, f'Erro ao enviar e-mail: {str(e)}')
+                return redirect(reverse('contato'))
     
-    return render(request, 'seu_template.html', {'form': form})
+    return render(request, 'core/contato.html')
 
 from django.core.mail import send_mail, EmailMessage
