@@ -1,6 +1,5 @@
 from django import forms
-from django.core.mail import EmailMessage
-from django.conf import settings
+from django.core.mail.message import EmailMessage
 from django.utils.translation import gettext_lazy as _
 
 class ContatoForm(forms.Form):
@@ -42,20 +41,14 @@ class ContatoForm(forms.Form):
         Mensagem: {mensagem}
         """
 
-        try:
-            mail = EmailMessage(
-                subject=f"Novo contato: {assunto}",
-                body=conteudo,
-                from_email=settings.DEFAULT_FROM_EMAIL,
-                to=[settings.EMAIL_DESTINO],
-                headers={"Reply-To": email}
-            )
-            mail.send()
-            return True
-        except Exception as e:
-            # Log do erro (opcional)
-            print(f"Erro ao enviar e-mail: {str(e)}")
-            return False
+        mail = EmailMessage(
+            subject=f"Novo contato: {assunto}",
+            body=conteudo,
+            from_email="gislaine.teles.eng@gmail.com", # Considere mover para settings.py
+            to=["gislaine_teles@outlook.com"], # Considere mover para settings.py
+            headers={"Reply-To": email}
+        )
+        mail.send()
 
 # NÃO coloque return ou print aqui fora da classe/função
         # O print abaixo está fora do método e com indentação incorreta, será ignorado.
