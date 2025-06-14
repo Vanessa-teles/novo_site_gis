@@ -4,17 +4,42 @@
 {% block title %}Vistorias Técnicas Especializadas - Eng. Gislaine Teles{% endblock %}
 
 {% block content %}
-<!-- Banner / Hero Section -->
-<section id="banner" class="hero-section">
-    <div class="hero-content">
-        <h1>Proteja seu investimento com vistorias técnicas especializadas</h1>
-        <p>Evite prejuízos na entrega do seu imóvel e garanta a segurança do seu condomínio com laudos técnicos profissionais</p>
-        <ul class="actions special">
-            <li><a href="{% url 'contato' %}" class="button primary large">Agende sua vistoria agora</a></li>
-            <li><a href="https://wa.me/5511985796256/?text=Olá, gostaria de saber mais informações sobre seus serviços." class="button alt large"><i class="fab fa-whatsapp"></i> Fale pelo WhatsApp</a></li>
-        </ul>
+<!-- Banner / Hero Section com sua imagem -->
+<section id="banner" style="background-image: url('{% static 'core/images/banner-atuali.jpg' %}'); background-size: cover; background-position: center; padding: 4rem 0; position: relative; text-align: center;">
+    <!-- Sobreposição escura para melhorar a legibilidade do texto -->
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5);"></div>
+    
+    <!-- Conteúdo do banner -->
+    <div style="position: relative; z-index: 2; color: white; max-width: 800px; margin: 0 auto; padding: 0 1rem;">
+        <h1 style="font-size: 2.5rem; margin-bottom: 1.5rem; color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.8);">Proteja seu investimento com vistoria técnica especializada</h1>
+        <p style="font-size: 1.2rem; margin-bottom: 2rem; color: white; text-shadow: 1px 1px 2px rgba(0,0,0,0.8);">Evite prejuízos na entrega do seu imóvel e garanta a segurança do seu condomínio com laudo técnico profissional</p>
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: center; width: 100%; box-sizing: border-box;">
+   <div style="display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1rem;">
+         <a href="{% url 'contato' %}" 
+   class="button primary large" 
+   style="display: flex; /* Transforma o link em container flex */
+          align-items: center; /* Centraliza verticalmente o texto */
+          justify-content: center; /* Centraliza horizontalmente o texto */
+          text-align: center; /* Mantém por segurança */
+          width: auto; 
+          min-width: 200px;
+          /* Adicione aqui outros estilos visuais do seu botão */
+          padding: 10px 20px; /* Exemplo */
+          background-color: #124559; /* Exemplo */
+          color: white; /* Exemplo */
+          text-decoration: none; /* Exemplo */
+          border-radius: 5px; /* Exemplo */
+          ">
+    Agendar vistoria agora
+   </a>
+</div>
+</div>
+</div>
     </div>
 </section>
+
+
+
 
 <!-- Main -->
 <section id="main" class="container">
@@ -32,7 +57,7 @@
             </div>
             <div class="benefit-item">
                 <i class="fas fa-home"></i>
-                <span>+100 imóveis vistoriados</span>
+                <span>+1000 imóveis vistoriados</span>
             </div>
             <div class="benefit-item">
                 <i class="fas fa-file-alt"></i>
@@ -59,10 +84,27 @@
                     <li><i class="fas fa-check"></i> Análise de esquadrias e vedações</li>
                     <li><i class="fas fa-check"></i> Documentação fotográfica detalhada</li>
                     <li><i class="fas fa-check"></i> Relatório técnico para construtora</li>
+                    <li><i class="fas fa-check"></i> Relatório técnico com validade jurídica</li>
                 </ul>
-                <p class="service-price">Investimento a partir de R$ XXX,XX</p>
-                <a href="{% url 'contato' %}" class="button alt">Solicitar orçamento</a>
-            </section>
+                 <a href="{% url 'contato' %}" 
+   class="button primary large" 
+   style="display: flex; /* Transforma o link em container flex */
+          align-items: center; /* Centraliza verticalmente o texto */
+          justify-content: center; /* Centraliza horizontalmente o texto */
+          text-align: center; /* Mantém por segurança */
+          width: auto; 
+          min-width: 200px;
+          /* Adicione aqui outros estilos visuais do seu botão */
+          padding: 10px 20px; /* Exemplo */
+          background-color: #124559; /* Exemplo */
+          color: white; /* Exemplo */
+          text-decoration: none; /* Exemplo */
+          border-radius: 5px; /* Exemplo */
+          ">
+    Solicitar orçamento
+            </a>
+    <section class="box special features">
+        <div class="features-row">
             <section class="service-card">
                 <div class="service-icon">
                     <i class="fas fa-building"></i>
@@ -75,9 +117,25 @@
                     <li><i class="fas fa-check"></i> Verificação de sistemas prediais</li>
                     <li><i class="fas fa-check"></i> Orientação para manutenções preventivas</li>
                     <li><i class="fas fa-check"></i> Suporte técnico para assembleias</li>
+                    <li><i class="fas fa-check"></i> fiscalização de reformas em apartamentos</li>
                 </ul>
-                <a href="{% url 'contato' %}" class="button alt">Solicitar orçamento</a>
-            </section>
+                 <a href="{% url 'contato' %}" 
+   class="button primary large" 
+   style="display: flex; /* Transforma o link em container flex */
+          align-items: center; /* Centraliza verticalmente o texto */
+          justify-content: center; /* Centraliza horizontalmente o texto */
+          text-align: center; /* Mantém por segurança */
+          width: auto; 
+          min-width: 200px;
+          /* Adicione aqui outros estilos visuais do seu botão */
+          padding: 10px 20px; /* Exemplo */
+          background-color: #124559; /* Exemplo */
+          color: white; /* Exemplo */
+          text-decoration: none; /* Exemplo */
+          border-radius: 5px; /* Exemplo */
+          ">
+    Solicitar orçamento
+            </a>
         </div>
         <div class="features-row">
             <section class="service-card">
@@ -93,23 +151,92 @@
                     <li><i class="fas fa-check"></i> Laudos para seguradoras</li>
                     <li><i class="fas fa-check"></i> Projetos estruturais corretivos</li>
                 </ul>
-                <a href="{% url 'contato' %}" class="button alt">Solicitar orçamento</a>
-            </section>
+                <a href="{% url 'contato' %}" 
+   class="button primary large" 
+   style="display: flex; /* Transforma o link em container flex */
+          align-items: center; /* Centraliza verticalmente o texto */
+          justify-content: center; /* Centraliza horizontalmente o texto */
+          text-align: center; /* Mantém por segurança */
+          width: auto; 
+          min-width: 200px;
+          /* Adicione aqui outros estilos visuais do seu botão */
+          padding: 10px 20px; /* Exemplo */
+          background-color: #124559; /* Exemplo */
+          color: white; /* Exemplo */
+          text-decoration: none; /* Exemplo */
+          border-radius: 5px; /* Exemplo */
+          ">
+    Solicitar orçamento
+</a>
+
             <section class="service-card cta-card">
                 <div class="cta-content">
                     <h3>Não deixe para depois!</h3>
                     <p>Problemas construtivos identificados tardiamente podem gerar custos muito maiores. Agende sua vistoria hoje mesmo e garanta tranquilidade e economia.</p>
-                    <a href="{% url 'contato' %}" class="button primary large">Agendar vistoria</a>
-                    <p class="small-text">Ou ligue: <strong>(11) 98579-6256</strong></p>
+                    <div style="display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1rem;">
+                     <a href="{% url 'contato' %}" class="button primary large" 
+   style="display: flex; /* Transforma o link em container flex */
+          align-items: center; /* Centraliza verticalmente o texto */
+          justify-content: center; /* Centraliza horizontalmente o texto */
+          text-align: center; /* Mantém por segurança */
+          width: auto; 
+          min-width: 200px;
+          /* Adicione aqui outros estilos visuais do seu botão */
+          padding: 10px 20px; /* Exemplo */
+          background-color: #124559; /* Exemplo */
+          color: white; /* Exemplo */
+          text-decoration: none; /* Exemplo */
+          border-radius: 5px; /* Exemplo */
+          ">
+    Agendar vistoria
+</a>
+
                 </div>
             </section>
         </div>
     </section>
 
+<!-- Image Gallery Section -->
+<section class="box special">
+    <header>
+        <div
+        style="background-color:rgb(255, 255, 255); padding: 1rem; text-align: center;">
+        <h3>Galeria de Projetos</h3>
+    </div>
+        <p>Confira alguns dos nossos trabalhos recentes</p>
+    </header>
+    <div class="image-gallery">
+        <div class="gallery-row">
+            <div class="gallery-item">
+                <img src="{% static 'core/images/vistoria-2.jpg' %}" alt="Vistoria de apartamento" style="max-width: 100%; height: auto; max-height: 250px; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);" />
+                <div class="gallery-caption">Vistoria de entrega de chaves - Residencial Vila Nova</div>
+            </div>
+            <div class="gallery-item">
+                <img src="{% static 'core/images/laudo-1.jpg' %}" alt="Laudo técnico" style="max-width: 100%; height: auto; max-height: 250px; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);" />
+                <div class="gallery-caption">Laudo técnico de infiltração - Villa Leopoldina</div>
+            </div>
+        </div>
+        <div class="gallery-row">
+            <div class="gallery-item">
+                <img src="{% static 'core/images/obra-gih.jpg' %}" alt="Vistoria de condomínio" style="max-width: 100%; height: auto; max-height: 250px; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);" />
+                <div class="gallery-caption">projeto estrutural - city América</div>
+            </div>
+            <div class="gallery-item">
+                <img src="{% static 'core/images/estrutura-2.jpg' %}" alt="Análise estrutural" style="max-width: 100%; height: auto; max-height: 250px; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);" />
+                <div class="gallery-caption">Análise estrutural - Condomínio Residencial Jardim Europa</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
     <!-- Testimonials Section -->
     <section class="box special">
         <header>
+            <div
+            style="background-color:rgb(255, 255, 255); padding: 1rem; text-align: center;">
             <h3>O que nossos clientes dizem</h3>
+        </div>
         </header>
         <div class="testimonials">
             <div class="testimonial">
@@ -134,7 +261,10 @@
     <!-- FAQ Section -->
     <section class="box special">
         <header>
+            <div
+            style="background-color:rgb(255, 255, 255); padding: 1rem; text-align: center;">
             <h3>Perguntas Frequentes</h3>
+        </div>
         </header>
         <div class="faq-container">
             <div class="faq-item">
@@ -157,74 +287,79 @@
     </section>
 
     <!-- About Section -->
-    <div class="row box">
-        <div class="col-3 col-12-mobilep">
-            <div>
-                <span class="image"> <img style="width: 110%; height: auto; float: none; border-radius: 50%;" src="{% static 'core/images/engenheira.jpg' %}" alt="Engenheira Gislaine Teles"/></span>
-            </div>
-        </div>
-        <div class="col-9 col-12-mobilep">
-            <h3>Sobre a Engenheira</h3>
-            <p>Gislaine Teles é uma engenheira civil pós-graduada em Engenharia Diagnóstica e Documentação Legal, com mais de 5 anos de experiência em vistorias técnicas e laudos especializados.</p>
-            <p>Com expertise em identificação de problemas construtivos em condomínios e residências, já realizou mais de 100 vistorias técnicas, ajudando proprietários a garantirem seus direitos e síndicos a manterem seus condomínios seguros e valorizados.</p>
-            <ul class="credentials-list">
-                <li><i class="fas fa-graduation-cap"></i> Pós-graduação em Engenharia Diagnóstica</li>
-                <li><i class="fas fa-id-card"></i> CREA nº XXXXX</li>
-                <li><i class="fas fa-certificate"></i> Especialista em vistorias e laudos técnicos</li>
-            </ul>
+<section class="box special">
+  <div class="about-section">
+    <div class="about-image-container">
+      <!-- Para a imagem redonda -->
+<img src="{% static 'core/images/foto.redonda.jpg' %}" alt="Engenheira Gislaine Teles" 
+     style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); display: inline-block;" />
         </div>
     </div>
+    <div class="col-9 col-12-mobilep">
+      <h3>Sobre a Engenheira</h3>
+      <p>Gislaine Teles é uma engenheira civil pós-graduada em Engenharia Diagnóstica e Documentação Legal, com mais de 5 anos de experiência em vistorias técnicas e laudos especializados.</p>
+      <p>Com expertise em identificação de problemas construtivos em condomínios e residências, já realizou mais de 1000 vistorias técnicas, ajudando proprietários a garantirem seus direitos e síndicos a manterem seus condomínios seguros e valorizados.</p>
+      <ul class="credentials-list">
+        <li><i class="fas fa-graduation-cap"></i> Pós-graduação em Engenharia Diagnóstica</li>
+        <li><i class="fas fa-id-card"></i> CREA nº 5070847342-SP</li>
+        <li><i class="fas fa-certificate"></i> Especialista em vistorias e laudos técnicos</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-    <!-- Contact Form Section -->
-    <section id="contact" class="box special">
-        <header>
-            <h3>Entre em contato</h3>
-            <p>Preencha o formulário abaixo para solicitar um orçamento ou agendar sua vistoria</p>
-        </header>
-        <form method="post" action="{% url 'contato' %}" class="contact-form">
-            {% csrf_token %}
-            <div class="row gtr-50 gtr-uniform">
-                <div class="col-6 col-12-mobilep">
-                    <input type="text" name="nome" id="nome" placeholder="Nome completo" required />
-                </div>
-                <div class="col-6 col-12-mobilep">
-                    <input type="email" name="email" id="email" placeholder="Email" required />
-                </div>
-                <div class="col-6 col-12-mobilep">
-                    <input type="text" name="telefone" id="telefone" placeholder="Telefone/WhatsApp" required />
-                </div>
-                <div class="col-6 col-12-mobilep">
-                    <input type="text" name="cidade" id="cidade" placeholder="Cidade" required />
-                </div>
-                <div class="col-12">
-                    <input type="text" name="assunto" id="assunto" placeholder="Assunto" required />
-                </div>
-                <div class="col-12">
-                    <textarea name="mensagem" id="mensagem" placeholder="Descreva sua necessidade" rows="5" required></textarea>
-                </div>
-                <div class="col-12">
-                    <ul class="actions special">
-                        <li><input type="submit" value="Enviar mensagem" class="button primary large" /></li>
-                    </ul>
-                </div>
-                <div class="col-12 text-center">
-                    {% if messages %}
-                        {% for message in messages %}
-                        <h4 style="text-align: center;" class="{{ message.tags }} {% if message.tags %} {% endif %}"> {{ message }} </h4>
-                        {% endfor %}
-                    {% endif %}
-                </div>
+<!-- Video Section -->
+<section class="box special">
+    <header>
+        <div style="background-color:rgb(255, 255, 255); padding: 1rem; text-align: center;">
+            <h3>Conheça Nosso Trabalho</h3>
+            <p>Assista ao vídeo para entender melhor nossos serviços de vistoria</p>
+        </div>
+    </header>
+    
+    <div style="display: flex; justify-content: center; margin: 2rem 0;">
+        <div style="width: 100%; max-width: 800px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); border-radius: 8px; overflow: hidden;">
+            <!-- Vídeo local -->
+            <video controls style="width: 100%; height: auto; display: block;">
+                <source src="{% static 'core/videos/video-test.mp4' %}" type="video/mp4">
+                Seu navegador não suporta vídeos HTML5.
+            </video>
+        </div>
+    </div>
+</section>
+
+
             </div>
-        </form>
-    </section>
+            
+            <!-- Legenda do vídeo (opcional ) -->
+            <div style="background-color:rgb(255, 255, 255); padding: 1rem; text-align: center;">
+                <p style="margin: 0; color: #333; font-size: 0.9rem;">O que os Construtores Não te Contam: A Importância da Vistoria Técnica Profissional</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 
     <!-- Final CTA -->
     <section class="box special cta-final">
         <h3>Proteja seu investimento com uma vistoria profissional</h3>
         <p>Não deixe para depois! Problemas construtivos identificados tardiamente podem gerar custos muito maiores.</p>
-        <ul class="actions special">
-            <li><a href="{% url 'contato' %}" class="button primary large">Agendar vistoria agora</a></li>
-            <li><a href="https://wa.me/5511985796256/?text=Olá, gostaria de saber mais informações sobre seus serviços." class="button alt large"><i class="fab fa-whatsapp"></i> Falar pelo WhatsApp</a></li>
+        <div>
+    <a href="{% url 'contato' %}" class="button primary large" 
+   style="display: flex; /* Transforma o link em container flex */
+          align-items: center; /* Centraliza verticalmente o texto */
+          justify-content: center; /* Centraliza horizontalmente o texto */
+          text-align: center; /* Mantém por segurança */
+          width: auto; 
+          min-width: 200px;
+          /* Adicione aqui outros estilos visuais do seu botão */
+          padding: 10px 20px; /* Exemplo */
+          background-color: #124559; /* Exemplo */
+          color: white; /* Exemplo */
+          text-decoration: none; /* Exemplo */
+          border-radius: 5px; /* Exemplo */
+          ">Agendar vistoria </a>
+</div>
         </ul>
     </section>
 
