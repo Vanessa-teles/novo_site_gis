@@ -12,7 +12,7 @@ def contato(request):
         if form.is_valid():
             try:
                 # Chamando sendEmail() (com E maiúsculo)
-                if form.sendEmail():  # Agora com o nome correto
+                if form.send_mail():  # Agora com o nome correto
                     messages.success(request, 'E-mail enviado com sucesso!')
                 else:
                     messages.error(request, 'Falha ao enviar e-mail')
