@@ -18,3 +18,5 @@ def contato(request):
                 messages.error(request, f'Erro ao enviar e-mail: {str(e)}')
                 return redirect(reverse('contato'))
     return render(request, 'core/contato.html')
+
+from django.core.mail import send_mail, EmailMessage

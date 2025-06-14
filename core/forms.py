@@ -12,7 +12,7 @@ class ContatoForm(forms.Form):
     # Mantemos o CharField aqui, mas poderíamos usar ChoiceField se quiséssemos validar as opções no backend
     service = forms.CharField(label=_("Serviço"), max_length=100)
 
-  # Mapeamento dos valores do formulário para os textos completos
+    # Mapeamento dos valores do formulário para os textos completos
     SERVICE_CHOICES_MAP = {
         "entrega": "Vistoria de Entrega de Chaves",
         "sindico": "Vistoria para Síndicos",
@@ -41,7 +41,7 @@ class ContatoForm(forms.Form):
         # Usamos o texto completo do serviço no e-mail
         s = _(service_full_text)
 
-        conteudo = f'NOVO CONTATO VIA E-MAIL\nNome do Cliente: {n}\nEmail informado para contato: {e}\nCidade: {c}\nTelefone informado para contato: {t}\nServiço solicitado: {t}\nAssunto: {a}\nMensagem: {m}\n'
+        conteudo = f"NOVO CONTATO VIA E-MAIL\nNome do Cliente: {n}\nEmail informado para contato: {e}\nCidade: {c}\nTelefone informado para contato: {t}\nServiço solicitado: {s}\nAssunto: {a}\nMensagem: {m}\n"
 
         mail = EmailMessage(
             subject=f"Novo contato: {assunto}",
