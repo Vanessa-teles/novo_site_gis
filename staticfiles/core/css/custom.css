@@ -1,384 +1,492 @@
-/* Estilos para a visualização da página de contato */
 :root {
-  --primary-color: #808b83;
-  --primary-dark: #808b83;
-  --accent-color: #25d366;
-  --secondary-color: #808b83;
-  --highlight-color: #808b83;
-  --decorative-color: #25d366;
-  --light-bg: #e9ebee;
-  --dark-bg: #808b83;
-  --text-color: #333333;
-  --contact-bg: #e9ebee;
-  
-  /* Cores para os campos do formulário */
-  --form-yellow: rgb(237, 237, 237);
-  --form-purple: rgb(237, 237, 237);
-  --form-green: rgb(237, 237, 237);
-  --form-orange: rgb(237, 237, 237);
-  --form-button: rgb(237, 237, 237);
+    --primary-color: #25d366; /* Verde principal */
+    --secondary-color: #1e9e4f; /* Verde mais escuro */
+    --accent-color: #ffc107; /* Amarelo de destaque */
+    --text-color: #333;
+    --light-gray: #f8f9fa;
+    --dark-gray: #6c757d;
+    --white: #fff;
 }
 
 body {
-  color: var(--text-color);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #e9ebee;
-  margin: 0;
-  padding: 0;
-  font-size: 1.1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-gray);
+    font-size: 1.2rem; /* Fonte dos textos aumentada um pouco */
 }
 
-/* Ajuste para a foto redonda */
-.image img[style*="border-radius: 50%"] {
-  max-width: 150px !important; /* Reduz o tamanho máximo da imagem */
-  margin: 0 auto;
-  display: block;
-  border-radius: 50% !important;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+/* Reset de margens e paddings */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 
-/* Header e navegação */
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Estilos gerais */
+
+body {
+    -webkit-text-size-adjust: none;
+}
+
+html, body {
+    height: 100%;
+}
+
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body.is-preload * {
+    -moz-animation: none !important;
+    -webkit-animation: none !important;
+    -ms-animation: none !important;
+    animation: none !important;
+    -moz-transition: none !important;
+    -webkit-transition: none !important;
+    -ms-transition: none !important;
+    transition: none !important;
+}
+
+/* Tipografia */
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 1rem 0;
+    color: var(--secondary-color);
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+p {
+    margin: 0 0 1.5rem 0;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+strong, b {
+    font-weight: 700;
+}
+
+em, i {
+    font-style: italic;
+}
+
+/* Layout */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Header */
 #header {
-  background-color: transparent;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    background-color: transparent; /* Transparente para o banner ficar no topo */
+    padding: 1.5rem 0;
+    position: absolute; /* Posiciona absolutamente sobre o banner */
+    width: 100%;
+    top: 0; /* Começa no topo da página */
+    z-index: 1000; /* Garante que fique acima de outros elementos */
 }
 
-#header a img {
-  width: auto;
-  height: 60px;
-}
-
-#nav {
-  display: flex;
-  align-items: center;
+#header .logo {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    font-weight: 700;
 }
 
 #nav ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 #nav ul li {
-  margin-left: 1rem;
+    margin-left: 2rem;
 }
 
 #nav ul li a {
-  text-decoration: none;
-  color: var(--primary-color);
-  font-weight: 500;
-  padding: 0.5rem 1rem;
-  border: 1px solid var(--primary-color);
-  border-radius: 4px;
-  transition: all 0.3s ease;
+    color: var(--primary-color);
+    font-weight: 600;
+    transition: color 0.2s ease-in-out;
 }
 
 #nav ul li a:hover {
-  background-color: var(--primary-color);
-  color: white;
+    color: var(--accent-color);
+    text-decoration: none;
 }
 
-/* Adicione esta regra ao seu arquivo CSS */
-.button.primary.large {
-    display: inline-block;
-    margin: 0 auto;
-}
-
-/* Ou se precisar de mais controle: */
-.container-botao {
+/* Banner */
+#banner {
+    /* A imagem de fundo será definida no HTML, não no CSS */
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
     text-align: center;
+    padding: 12em 0 8em 0; /* Ajustado padding-top para acomodar o cabeçalho */
+    position: relative;
+    overflow: hidden;
+    margin-top: 0; /* Garante que não haja margem superior */
 }
 
-.botao-centralizado {
-    display: inline-block;
-    margin: 0 auto;
+#banner .inner {
+    position: relative;
+    z-index: 1;
 }
 
-/* Container principal */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
+#banner h1 {
+    color: var(--white);
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
 }
 
-.medium {
-  max-width: 800px;
+#banner p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
 }
 
-/* Box branca principal */
+/* Seções */
+.wrapper {
+    padding: 4rem 0;
+}
+
+.wrapper.style1 {
+    background-color: var(--white);
+}
+
+.wrapper.style2 {
+    background-color: var(--light-gray);
+}
+
+.wrapper.style3 {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.wrapper.style3 h1, .wrapper.style3 h2, .wrapper.style3 h3, .wrapper.style3 h4, .wrapper.style3 h5, .wrapper.style3 h6 {
+    color: var(--white);
+}
+
+/* Caixas de conteúdo */
 .box {
-  background-color: var(--contact-bg);
-  border-radius: 8px;
-  padding: 2rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
 }
 
-.main-box {
-  background-color: white;
-  border-radius: 8px;
-  padding: 2rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+.box h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
 }
 
-/* Formulário de contato */
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form input[type="tel"],
-.contact-form select,
-.contact-form textarea {
-  border-width: 1px;
-  border-style: solid;
-  border-radius: 4px;
-  padding: 0.8rem;
-  font-size: 16px;
-  width: 100%;
-  margin-bottom: 1rem;
+.box p {
+    color: var(--text-color);
 }
 
-/* Layout de colunas */
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 -1rem;
+/* Botões */
+.button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--white) !important;
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s ease-in-out;
 }
 
-.col-6 {
-  flex: 0 0 50%;
-  padding: 0 1rem;
+.button:hover {
+    background-color: #e6b000; /* Um tom mais escuro de amarelo */
+    text-decoration: none;
 }
 
-.col-12 {
-  flex: 0 0 100%;
-  padding: 0 1rem;
+/* Ícones */
+.icon {
+    margin-right: 0.5rem;
 }
 
-.actions {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.special {
-  text-align: center;
-}
-
-/* Hero section com imagem de fundo */
-.hero-section-background {
-  text-align: center;
-  padding: 8rem 0; /* Mantive o padding original maior para melhor aparência */
-  position: relative;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-              url('../images/novobanner.png') center/cover no-repeat;
-  color: white;
-  min-height: 500px; /* Adicionei uma altura mínima */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem;
-}
-
-.hero-section-background h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
-}
-
-.hero-section-background p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  color: white;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-  .hero-section-background {
-    padding: 3rem 0; /* Reduzido de 6rem para 3rem */
-  }
-  
-  .hero-section-background h1 {
-    font-size: 2rem;
-  }
-  
-  .hero-section-background p {
-    font-size: 1rem;
-  }
-}
-
-/* Portfolio section */
-.portfolio-section {
-  margin-top: 3rem;
-  text-align: center;
-}
-
-.portfolio-image {
-  max-width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-/* Services section */
-.services-section {
-  margin-top: 3rem;
-}
-
-.service-title {
-  font-size: 1.5rem;
-  color: var(--primary-color);
-  margin-bottom: 1rem;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 0.5rem;
-}
-
-.service-description {
-  line-height: 1.6;
-  margin-bottom: 2rem;
+.icon.solid {
+    color: var(--primary-color);
 }
 
 /* Footer */
-.footer {
-  background-color: #f5f5f5;
-  padding: 2rem 0;
-  text-align: center;
-  margin-top: 3rem;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centraliza todo o conteúdo verticalmente */
+#footer {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 3rem 0;
+    text-align: center;
 }
 
-.footer .container {
-  max-width: 1200px;
-  width: 100%; /* Garante que o container ocupe a largura máxima disponível */
-  margin: 0 auto;
-  padding: 0 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centraliza os itens internos */
+#footer .icons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
 }
 
-.social-links {
-  margin-bottom: 1rem;
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  width: 100%; /* Garante que o container dos ícones ocupe toda a largura */
+#footer .icons li {
+    margin: 0 1rem;
 }
 
-.social-links a {
-  color: var(--primary-color);
-  font-size: 1.5rem;
-  text-decoration: none;
-  transition: color 0.3s ease;
-  display: inline-flex; /* Melhora o alinhamento dos ícones */
-  align-items: center;
-  justify-content: center;
+#footer .icons li a {
+    color: var(--accent-color); /* Ícones amarelos */
+    font-size: 2rem;
+    transition: color 0.2s ease-in-out;
 }
 
-.social-links a:hover {
-  color: var(--primary-dark);
+#footer .icons li a:hover {
+    color: var(--white);
 }
 
-.copyright {
-  font-size: 0.9rem;
-  color: #777;
-  text-align: center;
-  width: 100%; /* Garante que o texto ocupe toda a largura */
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-  .footer {
-    padding: 1.5rem 0;
-  }
-  
-  .footer .container {
-    padding: 0 1rem;
-  }
+#footer .copyright {
+    font-size: 0.9rem;
 }
 
 /* WhatsApp Floating Button */
 .whatsapp-float {
-  position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 30px;
-  right: 30px;
-  background-color: #25d366;
-  color: white;
-  border-radius: 50%;
-  text-align: center;
-  font-size: 30px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  border-bottom: none;
-  transition: all 0.3s ease;
-  animation: pulse 2s infinite;
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-  }
-  70% {
-    box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-  }
+.whatsapp-float i {
+    margin-top: 0;
 }
 
-.whatsapp-float:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+/* Formulários */
+form {
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+form input[type="submit"] {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background-color 0.2s ease-in-out;
+}
+
+form input[type="submit"]:hover {
+    background-color: var(--secondary-color);
 }
 
 /* Responsividade */
-@media (max-width: 768px) {
-  .col-12-mobilep {
-    flex: 0 0 100%;
-  }
-  
-  .row {
-    margin: 0;
-  }
-  
-  .col-6, .col-12 {
-    padding: 0;
-  }
-  
-  #header {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  #nav {
-    margin-top: 1rem;
-  }
-  
-  .container {
-    padding: 1rem;
-  }
-  
-  .main-box {
-    padding: 1.5rem;
-  }
+@media screen and (max-width: 980px) {
+    #header {
+        padding: 1rem 0;
+    }
+
+    #nav ul li {
+        margin-left: 1rem;
+    }
+
+    #banner {
+        padding: 8em 0 6em 0;
+    }
+
+    #banner h1 {
+        font-size: 2.5rem;
+    }
+
+    #banner p {
+        font-size: 1.1rem; /* Ajustado para mobile */
+    }
+
+    .wrapper {
+        padding: 3rem 0;
+    }
+
+    .box {
+        padding: 1.5rem;
+    }
+
+    #footer {
+        padding: 2rem 0;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    #header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #nav ul {
+        margin-top: 1rem;
+        justify-content: center;
+    }
+
+    #nav ul li {
+        margin: 0 0.5rem;
+    }
+
+    #banner {
+        padding: 6em 0 4em 0;
+    }
+
+    #banner h1 {
+        font-size: 2rem;
+    }
+
+    .wrapper {
+        padding: 2rem 0;
+    }
+
+    .box {
+        padding: 1rem;
+    }
+
+    form {
+        padding: 1.5rem;
+    }
+
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #banner h1 {
+        font-size: 1.8rem;
+    }
+
+    #banner p {
+        font-size: 1rem; /* Ajustado para mobile */
+    }
+
+    .button {
+        padding: 0.6rem 1.5rem;
+        font-size: 1rem;
+    }
 }
