@@ -35,7 +35,7 @@ body {
   display: block;
   border-radius: 50% !important;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
+}
 
 /* Header e navegação */
 #header {
@@ -174,7 +174,7 @@ body {
   padding: 8rem 0; /* Mantive o padding original maior para melhor aparência */
   position: relative;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-              url('../images/imag.banner.res.jpg') center/cover no-repeat;
+              url('../images/novobanner.png') center/cover no-repeat;
   color: white;
   min-height: 500px; /* Adicionei uma altura mínima */
   display: flex;
@@ -218,7 +218,6 @@ body {
     font-size: 1rem;
   }
 }
-
 
 /* Portfolio section */
 .portfolio-section {
@@ -382,5 +381,4 @@ body {
   .main-box {
     padding: 1.5rem;
   }
-}
 }
