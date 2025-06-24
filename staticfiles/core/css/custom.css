@@ -1,15 +1,15 @@
 /* Estilos para a visualização da página de contato */
 :root {
-  --primary-color: #1a5f7a;
-  --primary-dark: #124559;
-  --accent-color: #ffc107;
-  --secondary-color: #598392;
-  --highlight-color: #0d3b49;
-  --decorative-color: #e6b000;
-  --light-bg: #e4e4e4;
-  --dark-bg: #0d3b49;
+  --primary-color: #808b83;
+  --primary-dark: #808b83;
+  --accent-color: #25d366;
+  --secondary-color: #808b83;
+  --highlight-color: #808b83;
+  --decorative-color: #25d366;
+  --light-bg: #e9ebee;
+  --dark-bg: #808b83;
   --text-color: #333333;
-  --contact-bg: #9c9c9c;
+  --contact-bg: #e9ebee;
   
   /* Cores para os campos do formulário */
   --form-yellow: rgb(237, 237, 237);
@@ -22,9 +22,10 @@
 body {
   color: var(--text-color);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f0f0f0;
+  background-color: #e9ebee;
   margin: 0;
   padding: 0;
+  font-size: 1.1rem;
 }
 
 /* Ajuste para a foto redonda */
