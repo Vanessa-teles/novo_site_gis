@@ -16,15 +16,6 @@
 	<body class="landing is-preload">
 		<div id="page-wrapper">
 			
-<!-- Banner / Hero Section com sua imagem -->
-<section>
-{% if request.user_agent.is_mobile %}
-    <section id="banner" style="background-image: url("{% static 'core/images/banner_mobile.png' %}"); background-size: cover; background-position: center; padding: 4rem 0; position: relative; text-align: center;">
-{% else %}
-    <section id="banner" style="background-image: url('{% static 'core/images/novobanner.png' %}'); background-size: cover; background-position: center; padding: 4rem 0; position: relative; text-align: center;">
-{% endif %}
-</section>
-
 			<!-- Header -->
 			<header id="header" class="alt">
 				<nav id="nav">

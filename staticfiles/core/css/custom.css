@@ -1,9 +1,9 @@
 :root {
-    --primary-color: #25d366; /* Verde principal */
-    --secondary-color: #1e9e4f; /* Verde mais escuro */
-    --accent-color: #ffc107; /* Amarelo de destaque */
+    --primary-color: #808b83; /* Verde/cinza principal */
+    --secondary-color: #6a736d; /* Verde/cinza mais escuro */
+    --accent-color: #ffc107; /* Amarelo de destaque (mantido) */
     --text-color: #333;
-    --light-gray: #f8f9fa;
+    --light-gray: #e9ebee; /* Cor de fundo especificada */
     --dark-gray: #6c757d;
     --white: #fff;
 }
@@ -14,8 +14,8 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: var(--light-gray);
-    font-size: 1.2rem; /* Fonte dos textos aumentada um pouco */
+    background-color: var(--light-gray); /* Usa a nova cor de fundo */
+    font-size: 1.2rem; /* Fonte dos textos aumentada um pouco, como solicitado anteriormente */
 }
 
 /* Reset de margens e paddings */
@@ -397,6 +397,15 @@ form input[type="submit"]:hover {
     background-color: var(--secondary-color);
 }
 
+/* Classe para centralizar imagem redonda */
+.centered-round-image {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%; /* Para garantir que seja redonda */
+    max-width: 200px; /* Ajuste o tamanho máximo conforme necessário */
+    height: auto;
+}
+
 /* Responsividade */
 @media screen and (max-width: 980px) {
     #header {
@@ -489,4 +498,22 @@ form input[type="submit"]:hover {
         padding: 0.6rem 1.5rem;
         font-size: 1rem;
     }
+}
+
+/* Remove espaçamentos indesejados */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Evita barras de rolagem horizontais */
+}
+
+#header {
+    margin: 0;
+    padding: 0;
+}
+
+/* Se estiver usando um banner dentro de uma section/div: */
+.banner-container {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
 }
