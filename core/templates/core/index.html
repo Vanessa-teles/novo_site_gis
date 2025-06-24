@@ -5,7 +5,11 @@
 
 {% block content %}
 <!-- Banner / Hero Section com sua imagem -->
-<section id="banner" style="background-image: url('{% static 'core/images/banner-atuali.jpg' %}'); background-size: cover; background-position: center; padding: 4rem 0; position: relative; text-align: center;">
+{% if request.user_agent.is_mobile %}
+    <section id="banner" style="background-image: url("{% static 'core/images/banner_mobile.png' %}"); background-size: cover; background-position: center; padding: 4rem 0; position: relative; text-align: center;">
+{% else %}
+    <section id="banner" style="background-image: url("{% static 'core/images/novobannerjácomlogo.png' %}"); background-size: cover; background-position: center; padding: 4rem 0; position: relative; text-align: center;">
+{% endif %}
     <!-- Sobreposição escura para melhorar a legibilidade do texto -->
     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5);"></div>
     
@@ -25,7 +29,7 @@
           min-width: 200px;
           /* Adicione aqui outros estilos visuais do seu botão */
           padding: 10px 20px; /* Exemplo */
-          background-color: #124559; /* Exemplo */
+          background-color: #808b83; /* Exemplo */
           color: white; /* Exemplo */
           text-decoration: none; /* Exemplo */
           border-radius: 5px; /* Exemplo */
@@ -79,12 +83,12 @@
                 <h3>Vistoria de Entrega de Chaves</h3>
                 <p><strong>Não receba seu imóvel com problemas!</strong> Nossa vistoria técnica identifica falhas construtivas, acabamentos inadequados, instalações defeituosas e divergências do projeto antes que você assine o termo de recebimento.</p>
                 <ul class="service-list">
-                    <li><i class="fas fa-check"></i> Verificação completa de acabamentos</li>
-                    <li><i class="fas fa-check"></i> Teste de instalações elétricas e hidráulicas</li>
-                    <li><i class="fas fa-check"></i> Análise de esquadrias e vedações</li>
-                    <li><i class="fas fa-check"></i> Documentação fotográfica detalhada</li>
-                    <li><i class="fas fa-check"></i> Relatório técnico para construtora</li>
-                    <li><i class="fas fa-check"></i> Relatório técnico com validade jurídica</li>
+                    <li><i class="fas fa-check" style="color: #25d366;"></i> Verificação completa de acabamentos</li>
+                    <li><i class="fas fa-check" style="color: #25d366;"></i> Teste de instalações elétricas e hidráulicas</li>
+                    <li><i class="fas fa-check" style="color: #25d366;"></i> Análise de esquadrias e vedações</li>
+                    <li><i class="fas fa-check" style="color: #25d366;"></i> Documentação fotográfica detalhada</li>
+                    <li><i class="fas fa-check" style="color: #25d366;"></i> Relatório técnico para construtora</li>
+                    <li><i class="fas fa-check" style="color: #25d366;"></i> Relatório técnico com validade jurídica</li>
                 </ul>
                  <a href="{% url 'contato' %}" 
    class="button primary large" 
@@ -96,7 +100,7 @@
           min-width: 200px;
           /* Adicione aqui outros estilos visuais do seu botão */
           padding: 10px 20px; /* Exemplo */
-          background-color: #124559; /* Exemplo */
+          background-color: #808b83; /* Exemplo */
           color: white; /* Exemplo */
           text-decoration: none; /* Exemplo */
           border-radius: 5px; /* Exemplo */
@@ -112,12 +116,12 @@
                 <h3>Vistoria para Síndicos</h3>
                 <p><strong>Proteja seu condomínio e os moradores!</strong> Nossas vistorias técnicas para áreas comuns identificam problemas estruturais, infiltrações e falhas que podem comprometer a segurança e valorização do patrimônio.</p>
                 <ul class="service-list">
-                    <li><i class="fas fa-check"></i> Inspeção de áreas comuns</li>
-                    <li><i class="fas fa-check"></i> Identificação de patologias construtivas</li>
-                    <li><i class="fas fa-check"></i> Verificação de sistemas prediais</li>
-                    <li><i class="fas fa-check"></i> Orientação para manutenções preventivas</li>
-                    <li><i class="fas fa-check"></i> Suporte técnico para assembleias</li>
-                    <li><i class="fas fa-check"></i> fiscalização de reformas em apartamentos</li>
+                    <li><i class="fas fa-check" style="color: #25d366;"></i> Inspeção de áreas comuns</li>
+                    <li><i class="fas fa-check" style="color: #25d366;"></i> Identificação de patologias construtivas</li>
+                    <li><i class="fas fa-check" style="color: #25d366;"></i> Verificação de sistemas prediais</li>
+                    <li><i class="fas fa-check" style="color: #25d366;"></i> Orientação para manutenções preventivas</li>
+                    <li><i class="fas fa-check" style="color: #25d366;"></i> Suporte técnico para assembleias</li>
+                    <li><i class="fas fa-check" style="color: #25d366;"></i> fiscalização de reformas em apartamentos</li>
                 </ul>
                  <a href="{% url 'contato' %}" 
    class="button primary large" 
@@ -129,7 +133,7 @@
           min-width: 200px;
           /* Adicione aqui outros estilos visuais do seu botão */
           padding: 10px 20px; /* Exemplo */
-          background-color: #124559; /* Exemplo */
+          background-color: #808b83; /* Exemplo */
           color: white; /* Exemplo */
           text-decoration: none; /* Exemplo */
           border-radius: 5px; /* Exemplo */
@@ -145,11 +149,11 @@
                 <h3>Laudos Técnicos Especializados</h3>
                 <p><strong>Documentação técnica com respaldo legal!</strong> Elaboramos laudos técnicos detalhados para diversas finalidades, com ART (Anotação de Responsabilidade Técnica) e toda a documentação necessária.</p>
                 <ul class="service-list">
-                    <li><i class="fas fa-check"></i> Laudos de inspeção predial</li>
-                    <li><i class="fas fa-check"></i> Laudos de infiltração e umidade</li>
-                    <li><i class="fas fa-check"></i> Laudos para ações judiciais</li>
-                    <li><i class="fas fa-check"></i> Laudos para seguradoras</li>
-                    <li><i class="fas fa-check"></i> Projetos estruturais corretivos</li>
+                    <li><i class="fas fa-check" style="color: #25d366;"></i> Laudos de inspeção predial</li>
+                    <li><i class="fas fa-check" style="color: #25d366;"></i> Laudos de infiltração e umidade</li>
+                    <li><i class="fas fa-check" style="color: #25d366;"></i> Laudos para ações judiciais</li>
+                    <li><i class="fas fa-check" style="color: #25d366;"></i> Laudos para seguradoras</li>
+                    <li><i class="fas fa-check" style="color: #25d366;"></i> Projetos estruturais corretivos</li>
                 </ul>
                 <a href="{% url 'contato' %}" 
    class="button primary large" 
@@ -161,13 +165,46 @@
           min-width: 200px;
           /* Adicione aqui outros estilos visuais do seu botão */
           padding: 10px 20px; /* Exemplo */
-          background-color: #124559; /* Exemplo */
+          background-color: #808b83; /* Exemplo */
           color: white; /* Exemplo */
           text-decoration: none; /* Exemplo */
           border-radius: 5px; /* Exemplo */
           ">
     Solicitar orçamento
 </a>
+            </section>
+            
+            <section class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-clipboard-check"></i>
+                </div>
+                <h3>Vistoria de Locação</h3>
+                <p><strong>Proteja seu patrimônio na locação!</strong> Nossa vistoria de locação documenta o estado do imóvel antes da entrega ao locatário, evitando conflitos futuros e garantindo que você receba seu imóvel de volta nas mesmas condições.</p>
+                <ul class="service-list">
+                    <li><i class="fas fa-check" style="color: #25d366;"></i> Documentação completa do estado do imóvel</li>
+                    <li><i class="fas fa-check" style="color: #25d366;"></i> Registro fotográfico detalhado</li>
+                    <li><i class="fas fa-check" style="color: #25d366;"></i> Verificação de instalações e equipamentos</li>
+                    <li><i class="fas fa-check" style="color: #25d366;"></i> Laudo técnico para contrato de locação</li>
+                    <li><i class="fas fa-check" style="color: #25d366;"></i> Proteção legal para proprietários</li>
+                </ul>
+                <a href="{% url 'contato' %}" 
+   class="button primary large" 
+   style="display: flex; /* Transforma o link em container flex */
+          align-items: center; /* Centraliza verticalmente o texto */
+          justify-content: center; /* Centraliza horizontalmente o texto */
+          text-align: center; /* Mantém por segurança */
+          width: auto; 
+          min-width: 200px;
+          /* Adicione aqui outros estilos visuais do seu botão */
+          padding: 10px 20px; /* Exemplo */
+          background-color: #808b83; /* Exemplo */
+          color: white; /* Exemplo */
+          text-decoration: none; /* Exemplo */
+          border-radius: 5px; /* Exemplo */
+          ">
+    Solicitar orçamento
+</a>
+            </section>
 
             <section class="service-card cta-card">
                 <div class="cta-content">
@@ -183,7 +220,7 @@
           min-width: 200px;
           /* Adicione aqui outros estilos visuais do seu botão */
           padding: 10px 20px; /* Exemplo */
-          background-color: #124559; /* Exemplo */
+          background-color: #808b83; /* Exemplo */
           color: white; /* Exemplo */
           text-decoration: none; /* Exemplo */
           border-radius: 5px; /* Exemplo */
