@@ -35,7 +35,7 @@ body {
   display: block;
   border-radius: 50% !important;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
+}
 
 /* Header e navegação */
 #header {
@@ -219,7 +219,6 @@ body {
   }
 }
 
-
 /* Portfolio section */
 .portfolio-section {
   margin-top: 3rem;
@@ -382,5 +381,4 @@ body {
   .main-box {
     padding: 1.5rem;
   }
-}
 }
