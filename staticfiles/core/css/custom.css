@@ -174,7 +174,7 @@ em, i {
 }
 
 .medium {
-    max-width: 1000px; /* Aumentado */
+    max-width: 800px;
 }
 
 /* Header */
@@ -1288,11 +1288,9 @@ form input[type="submit"]:hover {
     }
     
     .container {
-    max-width: 1400px; /* Aumentado */
-    margin: 0 auto;
-    padding: 0 2rem; /* Mantido o espaçamento interno */
-}
-
+        padding: 1rem;
+    }
+    
     .main-box {
         padding: 1.5rem;
     }
@@ -1459,5 +1457,4 @@ input, select, textarea {
     color: #721c24;
     border: 1px solid #f5c6cb;
 }
-
 
