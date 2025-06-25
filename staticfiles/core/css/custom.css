@@ -168,13 +168,13 @@ em, i {
 /* Layout */
 
 .container {
-    max-width: 1400px;
+    max-width: 1600px;
     margin: 0 auto;
     padding: 0 2rem;
 }
 
 .medium {
-    max-width: 1000px;
+    max-width: 1200px;
 }
 
 
@@ -279,8 +279,8 @@ em, i {
     text-align: center;
     padding: 8rem 0; /* Mantive o padding original maior para melhor aparência */
     position: relative;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                url('../images/imag.banner.res.jpg') center/cover no-repeat;
+    /*background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('../images/imag.banner.res.jpg') center/cover no-repeat; */
     color: white;
     min-height: 500px; /* Adicionei uma altura mínima */
     display: flex;
