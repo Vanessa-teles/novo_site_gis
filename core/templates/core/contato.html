@@ -34,7 +34,7 @@
                     </div>
                     <div class="col-12">
                         <select name="service" id="service" required style="background-color:rgb(237, 237, 237); border-color: rgb(147, 147, 147); width: 100%;">
-                            <option value="">Selecione o serviço</option>
+                            <option value="">Selecione o serviço</option> 
                             <option value="entrega">Vistoria de Entrega de Chaves</option>
                             <option value="sindico">Vistoria para Síndicos</option>
                             <option value="laudo">Laudos Técnicos</option>
@@ -51,20 +51,25 @@
                     <div class="col-12">
                         <ul class="actions special">
                             <li>
-                                <div style="text-align: center;">
+                               <div style="display: flex; justify-content: center;">
     <input 
         type="submit" 
         value="Enviar e-mail" 
         style="
-            background-color: #808b83; 
-            color: white; 
-            border: none; 
-            padding: 0.8rem 2rem; 
-            font-size: 1rem; 
-            border-radius: 4px; 
+            background-color: #808b83;
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+            border-radius: 4px;
             cursor: pointer;
-            display: inline-block;  /* Altere para inline-block */
+            display: inline-flex;  /* Mudado para inline-flex */
+            align-items: center;
+            justify-content: center;
+            min-width: 200px;
+            text-align: center;
             margin: 2rem 0;
+            text-decoration: none;
         " 
     />
 </div>
