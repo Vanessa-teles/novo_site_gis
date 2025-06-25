@@ -6,6 +6,12 @@
 {% block content %}
 <!-- Banner / Hero Section -->
 <section id="banner" class="hero-section contact-hero">
+    <!-- Banner / Hero Section com sua imagem -->
+{% if request.user_agent.is_mobile %}
+    <section id="banner" style="background-image: url('{% static 'core/images/banner_mobile.png' %}'); background-size: cover; background-position: center; padding: 4rem 0; position: relative; text-align: center;">
+{% else %}
+    <section id="banner" style="background-image: url('{% static 'core/images/banner.png' %}'); background-size: cover; background-position: center; padding: 4rem 0; position: relative; text-align: center;">
+{% endif %}
     <div class="hero-content">
         <h1>Entre em contato</h1>
         <p>Solicite um orçamento ou agende sua vistoria técnica especializada</p>
