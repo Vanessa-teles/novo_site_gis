@@ -157,7 +157,7 @@ html, body {
     /*background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
                 url('../images/imag.banner.res.jpg') center/cover no-repeat; */
     color: white;
-    min-height: 600px; /* Adicionei uma altura mínima */
+    min-height: 500px; /* Adicionei uma altura mínima */
     display: flex;
     align-items: center;
     justify-content: center;
