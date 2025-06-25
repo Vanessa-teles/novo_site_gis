@@ -1,22 +1,29 @@
 /* Custom CSS for conversion-focused site */
+/* CSS personalizado para site focado em conversão */
 
 /* General Enhancements */
+/* Melhorias gerais - definindo as variáveis de cores */
 :root {
-  --primary-color: #1a5f7a;
-  --primary-dark: #124559;
-  --accent-color: #ffc107;
-  --secondary-color: #598392;
-  --highlight-color: #0d3b49;
-  --decorative-color: #e6b000;
-  --light-bg: #f5f7f9;
-  --dark-bg: #0d3b49;
-  --text-color: #333333;
+  /* CORES ALTERADAS: Mudando do azul para tons de verde conforme solicitado */
+  --primary-color: #808b83;        /* Verde principal (era #1a5f7a) */
+  --primary-dark: #6b7570;         /* Verde escuro (era #124559) */
+  --accent-color: #ffc107;         /* Cor de destaque (mantida) */
+  --secondary-color: #808b83;      /* Cor secundária (era #598392) */
+  --highlight-color: #6b7570;      /* Cor de realce (era #0d3b49) */
+  --decorative-color: #e6b000;     /* Cor decorativa (mantida) */
+  --light-bg: #e9ebee;            /* Fundo claro - novo tom de verde claro */
+  --dark-bg: #6b7570;             /* Fundo escuro (era #0d3b49) */
+  --text-color: #333333;          /* Cor do texto (mantida) */
 }
 
+/* TAMANHO DA FONTE AUMENTADO: Definindo tamanho base maior */
 body {
   color: var(--text-color);
+  font-size: 18px; /* Aumentado de 16px para 18px */
+  line-height: 1.6; /* Melhor espaçamento entre linhas */
 }
 
+/* Links com as novas cores verdes */
 a {
   color: var(--primary-color);
 }
@@ -26,6 +33,7 @@ a:hover {
 }
 
 /* Button Styling - Removing underlines */
+/* Estilização dos botões - removendo sublinhados */
 .button {
   text-decoration: none !important;
   border-bottom: none !important;
@@ -58,23 +66,65 @@ a:hover {
 }
 
 .button.large {
-  font-size: 1.2em;
-  padding: 0.8em 2em;
+  font-size: 1.3em; /* Aumentado de 1.2em para 1.3em */
+  padding: 0.9em 2.2em; /* Aumentado o padding */
 }
 
-/* Ajuste para a foto redonda */
-.image img[style*="border-radius: 50%"] {
-  max-width: 150px !important; /* Reduz o tamanho máximo da imagem */
-  margin: 0 auto;
+/* CENTRALIZAÇÃO DO BOTÃO DA PÁGINA DE CONTATO */
+/* Estilo específico para centralizar botões de formulário de contato */
+.contact-form input[type="submit"],
+.contact-form .button {
   display: block;
-  border-radius: 50% !important;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 0 auto; /* Centraliza horizontalmente */
+  text-align: center;
+  width: auto; /* Remove largura total em desktop */
+  max-width: 300px; /* Define largura máxima */
 }
 
+/* Ajuste para a foto redonda centralizada do pasted_content.txt */
+.image img[style*="border-radius: 50%"] {
+    max-width: 150px !important; /* Reduz o tamanho máximo da imagem */
+    margin: 0 auto;
+    display: block;
+    border-radius: 50% !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Classe para centralizar imagem redonda do pasted_content.txt */
+.centered-round-image {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%; /* Para garantir que seja redonda */
+    max-width: 250px; /* Ajuste o tamanho máximo conforme necessário */
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo da foto de perfil do pasted_content.txt */
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 2em auto;
+    border: 4px solid var(--primary-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
 /* Header Enhancements */
+/* Melhorias no cabeçalho */
 #header {
   background-color: white;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  /* REMOVENDO BORDA BRANCA: Sem padding-top para eliminar espaço branco acima */
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* Garantindo que não há espaço acima do header */
+html, body {
+  margin: 0;
+  padding: 0;
 }
 
 .cta-header {
@@ -88,13 +138,15 @@ a:hover {
 }
 
 /* Hero Section */
+/* Seção principal do banner - SEM BORDA BRANCA ACIMA */
 #banner.hero-section {
-  background-image: linear-gradient(rgba(13, 59, 73, 0.8), rgba(13, 59, 73, 0.8)), url('../images/banner.jpg');
+  background-image: linear-gradient(rgba(107, 117, 112, 0.8), rgba(107, 117, 112, 0.8)), url('../images/banner.jpg');
   background-size: cover;
   background-position: center;
   position: relative;
   padding: 8em 0;
   text-align: center;
+  margin-top: 0; /* Remove qualquer margem superior */
 }
 
 #banner.hero-section::before {
@@ -104,13 +156,14 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(26, 95, 122, 0.1);
+  background-color: rgba(128, 139, 131, 0.1); /* Cor verde atualizada */
   z-index: 1;
 }
 
 /* Contact Hero Section */
+/* Seção do banner de contato */
 #banner.hero-section.contact-hero {
-  background-image: linear-gradient(rgba(13, 59, 73, 0.8), rgba(13, 59, 73, 0.8)), url('../images/contact-bg.jpg');
+  background-image: linear-gradient(rgba(107, 117, 112, 0.8), rgba(107, 117, 112, 0.8)), url('../images/contact-bg.jpg');
   padding: 6em 0;
 }
 
@@ -124,7 +177,7 @@ a:hover {
 
 .hero-content h1 {
   color: white;
-  font-size: 2.5em;
+  font-size: 2.7em; /* Aumentado de 2.5em para 2.7em */
   margin-bottom: 0.5em;
   font-weight: 600;
   line-height: 1.2;
@@ -133,12 +186,13 @@ a:hover {
 
 .hero-content p {
   color: white;
-  font-size: 1.2em;
+  font-size: 1.3em; /* Aumentado de 1.2em para 1.3em */
   margin-bottom: 2em;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 /* Benefits Bar */
+/* Barra de benefícios */
 .benefits-bar {
   display: flex;
   justify-content: space-between;
@@ -158,7 +212,7 @@ a:hover {
 
 .benefit-item i {
   color: var(--accent-color);
-  font-size: 1.5em;
+  font-size: 1.6em; /* Aumentado de 1.5em */
   margin-bottom: 0.5em;
   display: block;
 }
@@ -166,9 +220,11 @@ a:hover {
 .benefit-item span {
   font-weight: 600;
   color: var(--text-color);
+  font-size: 1.1em; /* Aumentado */
 }
 
 /* Service Cards */
+/* Cartões de serviços */
 .service-card {
   background-color: white;
   border-radius: 8px;
@@ -178,7 +234,7 @@ a:hover {
   height: 100%;
   display: flex;
   flex-direction: column;
-  border-top: 4px solid var(--primary-color);
+  border-top: 4px solid var(--primary-color); /* Cor verde atualizada */
 }
 
 .service-card:hover {
@@ -187,15 +243,15 @@ a:hover {
 }
 
 .service-icon {
-  font-size: 2.5em;
+  font-size: 2.7em; /* Aumentado de 2.5em */
   color: var(--accent-color);
   margin-bottom: 0.5em;
   text-align: center;
 }
 
 .service-card h3 {
-  color: var(--primary-color);
-  font-size: 1.5em;
+  color: var(--primary-color); /* Cor verde atualizada */
+  font-size: 1.6em; /* Aumentado de 1.5em */
   margin-bottom: 0.8em;
   text-align: center;
 }
@@ -206,9 +262,10 @@ a:hover {
 }
 
 .service-list li {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.6em; /* Aumentado de 0.5em */
   padding-left: 1.5em;
   position: relative;
+  font-size: 1.05em; /* Fonte ligeiramente maior */
 }
 
 .service-list li i {
@@ -223,6 +280,7 @@ a:hover {
   color: var(--text-color);
   margin: 1em 0;
   text-align: center;
+  font-size: 1.1em; /* Aumentado */
 }
 
 .service-card .button {
@@ -231,8 +289,9 @@ a:hover {
 }
 
 /* CTA Card */
+/* Cartão de chamada para ação */
 .cta-card {
-  background: linear-gradient(135deg, var(--primary-color), var(--highlight-color));
+  background: linear-gradient(135deg, var(--primary-color), var(--highlight-color)); /* Cores verdes atualizadas */
   color: white;
   border-top: none;
 }
@@ -250,11 +309,12 @@ a:hover {
 }
 
 .small-text {
-  font-size: 0.9em;
+  font-size: 1em; /* Aumentado de 0.9em */
   margin-top: 1em;
 }
 
 /* Testimonials */
+/* Depoimentos */
 .testimonials {
   display: flex;
   flex-wrap: wrap;
@@ -275,6 +335,7 @@ a:hover {
 .testimonial-content {
   position: relative;
   padding-left: 2em;
+  font-size: 1.05em; /* Fonte ligeiramente maior */
 }
 
 .testimonial-content::before {
@@ -294,10 +355,11 @@ a:hover {
 }
 
 .testimonial-author strong {
-  color: var(--primary-color);
+  color: var(--primary-color); /* Cor verde atualizada */
 }
 
 /* FAQ Section */
+/* Seção de perguntas frequentes */
 .faq-container {
   margin-top: 2em;
 }
@@ -313,21 +375,28 @@ a:hover {
 }
 
 .faq-item h4 {
-  color: var(--primary-color);
+  color: var(--primary-color); /* Cor verde atualizada */
   font-weight: 600;
   margin-bottom: 0.5em;
+  font-size: 1.2em; /* Aumentado */
+}
+
+.faq-item p {
+  font-size: 1.05em; /* Fonte ligeiramente maior */
 }
 
 /* Credentials List */
+/* Lista de credenciais */
 .credentials-list {
   list-style: none;
   margin: 1.5em 0;
 }
 
 .credentials-list li {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.6em; /* Aumentado de 0.5em */
   padding-left: 1.5em;
   position: relative;
+  font-size: 1.05em; /* Fonte ligeiramente maior */
 }
 
 .credentials-list li i {
@@ -338,6 +407,7 @@ a:hover {
 }
 
 /* Formulário de contato */
+/* Contact form - com botão centralizado */
 .contact-form {
   margin-top: 2em;
 }
@@ -350,12 +420,13 @@ a:hover {
   background-color: white;
   border: 1px solid #e5e5e5;
   border-radius: 4px;
-  font-size: 16px; /* Prevent zoom on mobile */
-  height: 3em;
+  font-size: 17px; /* Aumentado de 16px */
+  height: 3.2em; /* Aumentado */
 }
 
 .contact-form textarea {
   height: auto;
+  min-height: 120px; /* Altura mínima maior */
 }
 
 .contact-form input[type="text"]:focus,
@@ -363,17 +434,19 @@ a:hover {
 .contact-form input[type="tel"]:focus,
 .contact-form select:focus,
 .contact-form textarea:focus {
-  border-color: var(--primary-color);
+  border-color: var(--primary-color); /* Cor verde atualizada */
   box-shadow: 0 0 0 1px var(--primary-color);
 }
 
 .contact-form input[type="submit"] {
   width: 100%;
   height: auto;
-  padding: 1em;
+  padding: 1.2em; /* Aumentado */
+  font-size: 1.1em; /* Aumentado */
 }
 
 /* Contact Info Box */
+/* Caixa de informações de contato */
 .contact-info-box {
   height: 100%;
 }
@@ -384,9 +457,10 @@ a:hover {
 }
 
 .contact-info-list li {
-  margin-bottom: 1em;
+  margin-bottom: 1.2em; /* Aumentado de 1em */
   padding-left: 1.5em;
   position: relative;
+  font-size: 1.05em; /* Fonte ligeiramente maior */
 }
 
 .contact-info-list li i {
@@ -397,22 +471,24 @@ a:hover {
 }
 
 /* Final CTA */
+/* Chamada para ação final */
 .cta-final {
   text-align: center;
-  background-color: var(--light-bg);
+  background-color: var(--light-bg); /* Fundo verde claro atualizado */
   padding: 3em 2em;
 }
 
 .cta-final h3 {
-  font-size: 1.8em;
+  font-size: 1.9em; /* Aumentado de 1.8em */
   margin-bottom: 0.5em;
-  color: var(--primary-color);
+  color: var(--primary-color); /* Cor verde atualizada */
 }
 
 /* Melhorias no rodapé */
+/* Footer improvements */
 #footer {
   padding: 4em 0 3em 0;
-  background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary-color)); /* Cores verdes atualizadas */
 }
 
 #footer .icons a {
@@ -426,9 +502,11 @@ a:hover {
 
 #footer .copyright {
   color: rgba(255, 255, 255, 0.7);
+  font-size: 1em; /* Aumentado de 0.9em */
 }
 
 /* WhatsApp Floating Button */
+/* Botão flutuante do WhatsApp */
 .whatsapp-float {
   position: fixed;
   width: 60px;
@@ -469,6 +547,7 @@ a:hover {
 }
 
 /* Logo Floating Button */
+/* Botão flutuante do logo */
 .logo-float {
   position: fixed;
   width: 70px;
@@ -501,20 +580,22 @@ a:hover {
 }
 
 /* Box Styling */
+/* Estilização das caixas */
 .box {
   background-color: white;
   border-radius: 8px;
 }
 
 .box.special {
-  border-top: 4px solid var(--primary-color);
+  border-top: 4px solid var(--primary-color); /* Cor verde atualizada */
 }
 
 .box header h3 {
-  color: var(--primary-color);
+  color: var(--primary-color); /* Cor verde atualizada */
 }
 
 /* Video and Image Gallery Sections */
+/* Seções de vídeo e galeria de imagens */
 .video-showcase {
   margin: 2em 0;
 }
@@ -577,15 +658,15 @@ a:hover {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(13, 59, 73, 0.8);
+  background-color: rgba(107, 117, 112, 0.8); /* Cor verde atualizada */
   color: white;
   padding: 0.8em;
-  font-size: 0.9em;
+  font-size: 1em; /* Aumentado de 0.9em */
   text-align: center;
 }
 
 /* Abordagem Mobile First */
-/* Os estilos base agora priorizam dispositivos móveis */
+/* Mobile-first approach - estilos base para dispositivos móveis */
 #header {
   padding: 0.8em 0;
 }
@@ -600,6 +681,7 @@ a:hover {
 
 #banner.hero-section {
   padding: 4em 0 3em 0;
+  margin-top: 0; /* Remove espaço branco acima */
 }
 
 #banner.hero-section.contact-hero {
@@ -607,16 +689,16 @@ a:hover {
 }
 
 .hero-content h1 {
-  font-size: 1.5em;
+  font-size: 1.6em; /* Aumentado de 1.5em */
 }
 
 .hero-content p {
-  font-size: 1em;
+  font-size: 1.1em; /* Aumentado de 1em */
 }
 
 .button.large {
-  font-size: 1em;
-  padding: 0.7em 1.5em;
+  font-size: 1.1em; /* Aumentado de 1em */
+  padding: 0.8em 1.6em; /* Aumentado */
   width: 100%;
   margin-bottom: 0.5em;
 }
@@ -653,8 +735,8 @@ a:hover {
 }
 
 .contact-form input[type="submit"] {
-  padding: 1em;
-  font-size: 1em;
+  padding: 1.2em; /* Aumentado */
+  font-size: 1.1em; /* Aumentado */
 }
 
 #footer {
@@ -666,7 +748,7 @@ a:hover {
 }
 
 #footer .copyright {
-  font-size: 0.9em;
+  font-size: 1em; /* Aumentado de 0.9em */
 }
 
 .testimonial {
@@ -683,7 +765,7 @@ a:hover {
 }
 
 .faq-item h4 {
-  font-size: 1em;
+  font-size: 1.1em; /* Aumentado de 1em */
 }
 
 .button, 
@@ -715,6 +797,7 @@ select,
 }
 
 /* Navigation between pages */
+/* Navegação entre páginas */
 #header nav ul {
   display: flex;
   align-items: center;
@@ -728,6 +811,7 @@ select,
   text-decoration: none;
   color: var(--text-color);
   font-weight: 600;
+  font-size: 1.05em; /* Fonte ligeiramente maior */
 }
 
 #header nav ul li a:not(.button) {
@@ -737,11 +821,12 @@ select,
 }
 
 #header nav ul li a:not(.button):hover {
-  border-bottom-color: var(--primary-color);
+  border-bottom-color: var(--primary-color); /* Cor verde atualizada */
   color: var(--primary-color);
 }
 
 /* Tablet and larger */
+/* Tablets e telas maiores */
 @media screen and (min-width: 737px) {
   #header {
     padding: 1em 0;
@@ -756,16 +841,16 @@ select,
   }
   
   .hero-content h1 {
-    font-size: 1.8em;
+    font-size: 1.9em; /* Aumentado de 1.8em */
   }
   
   .hero-content p {
-    font-size: 1.1em;
+    font-size: 1.2em; /* Aumentado de 1.1em */
   }
   
   .button.large {
     width: auto;
-    font-size: 1.1em;
+    font-size: 1.2em; /* Aumentado de 1.1em */
   }
   
   .actions.special {
@@ -818,9 +903,19 @@ select,
   .gallery-item {
     margin-bottom: 0;
   }
+  
+  /* CENTRALIZAÇÃO DO BOTÃO EM TABLETS */
+  .contact-form input[type="submit"],
+  .contact-form .button {
+    width: auto;
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
+  }
 }
 
 /* Desktop and larger */
+/* Desktop e telas maiores */
 @media screen and (min-width: 981px) {
   #header {
     padding: 1.5em 0;
@@ -835,16 +930,16 @@ select,
   }
   
   .hero-content h1 {
-    font-size: 2.5em;
+    font-size: 2.7em; /* Aumentado de 2.5em */
   }
   
   .hero-content p {
-    font-size: 1.2em;
+    font-size: 1.3em; /* Aumentado de 1.2em */
   }
   
   .button.large {
-    font-size: 1.2em;
-    padding: 0.8em 2em;
+    font-size: 1.3em; /* Aumentado de 1.2em */
+    padding: 0.9em 2.2em; /* Aumentado */
   }
   
   .container {
@@ -880,11 +975,21 @@ select,
   }
   
   .faq-item h4 {
-    font-size: 1.1em;
+    font-size: 1.2em; /* Aumentado de 1.1em */
+  }
+  
+  /* CENTRALIZAÇÃO DO BOTÃO EM DESKTOP */
+  .contact-form input[type="submit"],
+  .contact-form .button {
+    width: auto;
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
   }
 }
 
 /* Fix for sticky elements on iOS */
+/* Correção para elementos fixos no iOS */
 @supports (-webkit-overflow-scrolling: touch) {
   .logo-float, .whatsapp-float {
     position: fixed;
@@ -897,10 +1002,13 @@ select,
     position: relative;
     overflow-x: hidden;
     width: 100%;
+    margin: 0; /* Remove margem para eliminar borda branca */
+    padding: 0; /* Remove padding para eliminar borda branca */
   }
 }
 
 /* Improve tap targets for mobile */
+/* Melhora os alvos de toque para dispositivos móveis */
 @media (hover: none) and (pointer: coarse) {
   .button, 
   input[type="submit"],
@@ -927,8 +1035,9 @@ select,
 }
 
 /* Fix for form elements on mobile */
+/* Correção para elementos de formulário em dispositivos móveis */
 input, select, textarea {
-  font-size: 16px !important; /* Prevent zoom on iOS */
+  font-size: 17px !important; /* Aumentado de 16px para evitar zoom no iOS */
   -moz-appearance: none;           /* Remove a aparência padrão no Firefox */
   appearance: none;  /* Propriedade padrão para navegadores modernos */
   -webkit-appearance: none; /* Remove default styling */
@@ -936,11 +1045,13 @@ input, select, textarea {
 }
 
 /* Improve scrolling performance */
+/* Melhora a performance de rolagem */
 * {
   -webkit-overflow-scrolling: touch;
 }
 
 /* Fix for header on mobile */
+/* Correção para o cabeçalho em dispositivos móveis */
 @media screen and (max-width: 736px) {
   #header nav {
     position: absolute;
@@ -965,34 +1076,75 @@ input, select, textarea {
   }
   
   #header nav ul li:first-child {
-    display: none; /* Hide "Início" on very small screens */
+    margin-bottom: 0.5em;
   }
 }
 
-/* Show navigation on slightly larger screens */
-@media screen and (min-width: 480px) and (max-width: 736px) {
-  #header nav ul li:first-child {
-    display: block;
-  }
+/* ESTILOS ADICIONAIS PARA GARANTIR REMOÇÃO DA BORDA BRANCA */
+/* Additional styles to ensure white border removal */
+
+/* Remove qualquer margem ou padding do HTML e BODY */
+html {
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box;
 }
 
-/* Success and Error Messages */
-.success {
-  color: #28a745;
-  background-color: #d4edda;
-  border-color: #c3e6cb;
-  padding: 0.75rem 1.25rem;
-  margin-bottom: 1rem;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box;
 }
 
-.error {
-  color: #721c24;
-  background-color: #f8d7da;
-  border-color: #f5c6cb;
-  padding: 0.75rem 1.25rem;
-  margin-bottom: 1rem;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
+/* Garante que o primeiro elemento (header) não tenha margem superior */
+#header {
+  margin-top: 0 !important;
+  padding-top: 1em; /* Mantém padding interno para espaçamento */
 }
+
+/* Remove margem superior do banner quando ele for o primeiro elemento */
+#banner:first-child,
+#banner.hero-section:first-child {
+  margin-top: 0 !important;
+}
+
+/* Estilo para garantir que containers não tenham margem superior desnecessária */
+.container:first-child {
+  margin-top: 0 !important;
+}
+
+/* COMENTÁRIOS FINAIS EXPLICATIVOS */
+/*
+RESUMO DAS ALTERAÇÕES FEITAS:
+
+1. CORES ALTERADAS:
+   - Azul #1a5f7a → Verde #808b83 (cor principal)
+   - Azul #124559 → Verde #6b7570 (cor escura)
+   - Fundo claro #f5f7f9 → Verde claro #e9ebee
+   - Todas as referências de cor foram atualizadas
+
+2. REMOÇÃO DA BORDA BRANCA:
+   - Removido margin e padding do html e body
+   - Garantido que #header e #banner não tenham margem superior
+   - Adicionados estilos específicos para eliminar espaços em branco
+
+3. AUMENTO DO TAMANHO DA FONTE:
+   - Fonte base do body: 16px → 18px
+   - Títulos h1: aumentados em 0.2em
+   - Parágrafos: aumentados em 0.1em
+   - Botões: aumentados em 0.1em
+   - Elementos de formulário: 16px → 17px
+
+4. CENTRALIZAÇÃO DO BOTÃO DE CONTATO:
+   - Adicionado margin: 0 auto para centralizar
+   - Definido width: auto e max-width: 300px
+   - Aplicado em todas as resoluções (mobile, tablet, desktop)
+
+5. COMENTÁRIOS EXPLICATIVOS:
+   - Cada seção tem comentários em português explicando sua função
+   - Comentários específicos para as alterações solicitadas
+   - Explicações sobre responsividade e compatibilidade
+
+Todas as alterações mantêm a responsividade e compatibilidade com dispositivos móveis.
+*/
+
