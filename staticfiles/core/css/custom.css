@@ -179,16 +179,10 @@ html, body {
 /* Contact Hero Section */
 /* Seção do banner de contato */
 #banner.hero-section.contact-hero {
-     text-align: center;
-    padding: 8rem 0; /* Mantive o padding original maior para melhor aparência */
-    position: relative;
-    /*background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                url('../images/imag.banner.res.jpg') center/cover no-repeat; */
-    color: white;
-    min-height: 500px; /* Adicionei uma altura mínima */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: 
+    linear-gradient(rgba(107, 117, 112, 0.8), rgba(107, 117, 112, 0.8)),
+    url('../images/banner.png') no-repeat center center/cover;
+    padding: 6em 0;
 }
 
 .hero-content {
