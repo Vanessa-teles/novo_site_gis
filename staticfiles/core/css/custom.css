@@ -168,14 +168,15 @@ em, i {
 /* Layout */
 
 .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 2rem;
 }
 
 .medium {
-    max-width: 800px;
+    max-width: 1000px;
 }
+
 
 /* Header */
 #header {
