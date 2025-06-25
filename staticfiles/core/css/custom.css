@@ -1,25 +1,30 @@
 :root {
     --primary-color: #808b83; /* Verde/cinza principal */
-    --secondary-color: #6a736d; /* Verde/cinza mais escuro */
-    --accent-color: #ffc107; /* Amarelo de destaque (mantido) */
+    --secondary-color: #6a736d; /* Verde/cinza mais escuro para títulos, etc. */
+    --accent-color: #ffc107; /* Amarelo de destaque para ícones e botões */
     --text-color: #333;
     --light-gray: #e9ebee; /* Cor de fundo especificada */
     --dark-gray: #6c757d;
     --white: #fff;
 }
 
+/* Remove espaçamentos indesejados */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Evita barras de rolagem horizontais */
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--text-color);
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
     background-color: var(--light-gray); /* Usa a nova cor de fundo */
-    font-size: 1.2rem; /* Fonte dos textos aumentada um pouco, como solicitado anteriormente */
+    font-size: 1.25rem; /* Fonte dos textos aumentada um pouco mais */
 }
 
 /* Reset de margens e paddings */
-html, body, div, span, applet, object, iframe,
+div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
@@ -106,27 +111,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 2.75rem; /* Aumentado um pouco */
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 2.25rem; /* Aumentado um pouco */
 }
 
 h3 {
-    font-size: 1.75rem;
+    font-size: 1.9rem; /* Aumentado um pouco */
 }
 
 h4 {
-    font-size: 1.5rem;
+    font-size: 1.65rem; /* Aumentado um pouco */
 }
 
 h5 {
-    font-size: 1.25rem;
+    font-size: 1.35rem; /* Aumentado um pouco */
 }
 
 h6 {
-    font-size: 1rem;
+    font-size: 1.1rem; /* Aumentado um pouco */
 }
 
 p {
@@ -161,7 +166,7 @@ em, i {
 /* Header */
 #header {
     background-color: transparent; /* Transparente para o banner ficar no topo */
-    padding: 1.5rem 0;
+    padding: 0; /* Removido padding para controle total pelo banner */
     position: absolute; /* Posiciona absolutamente sobre o banner */
     width: 100%;
     top: 0; /* Começa no topo da página */
@@ -170,7 +175,7 @@ em, i {
 
 #header .logo {
     color: var(--primary-color);
-    font-size: 1.8rem;
+    font-size: 2.2rem; /* Logo um pouco maior */
     font-weight: 700;
 }
 
@@ -204,10 +209,21 @@ em, i {
     background-position: center;
     color: var(--white);
     text-align: center;
-    padding: 12em 0 8em 0; /* Ajustado padding-top para acomodar o cabeçalho */
+    padding: 15em 0 10em 0; /* Altura superior para o banner */
     position: relative;
     overflow: hidden;
     margin-top: 0; /* Garante que não haja margem superior */
+    width: 100vw; /* Largura total da viewport */
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+/* Se estiver usando um banner dentro de uma section/div: */
+.banner-container {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
 }
 
 #banner .inner {
@@ -217,13 +233,13 @@ em, i {
 
 #banner h1 {
     color: var(--white);
-    font-size: 3.5rem;
-    margin-bottom: 0.5rem;
+    font-size: 3.8rem; /* Aumentado para o banner */
+    margin-bottom: 0.75rem;
 }
 
 #banner p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
+    font-size: 1.35rem; /* Aumentado para o banner */
+    margin-bottom: 2.5rem;
 }
 
 /* Seções */
@@ -402,7 +418,7 @@ form input[type="submit"]:hover {
     display: block;
     margin: 0 auto;
     border-radius: 50%; /* Para garantir que seja redonda */
-    max-width: 200px; /* Ajuste o tamanho máximo conforme necessário */
+    max-width: 250px; /* Ajuste o tamanho máximo conforme necessário */
     height: auto;
 }
 
@@ -417,15 +433,15 @@ form input[type="submit"]:hover {
     }
 
     #banner {
-        padding: 8em 0 6em 0;
+        padding: 10em 0 8em 0; /* Ajustado para telas menores */
     }
 
     #banner h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
     #banner p {
-        font-size: 1.1rem; /* Ajustado para mobile */
+        font-size: 1.2rem;
     }
 
     .wrapper {
@@ -457,11 +473,11 @@ form input[type="submit"]:hover {
     }
 
     #banner {
-        padding: 6em 0 4em 0;
+        padding: 8em 0 6em 0;
     }
 
     #banner h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .wrapper {
@@ -487,33 +503,15 @@ form input[type="submit"]:hover {
 
 @media screen and (max-width: 480px) {
     #banner h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     #banner p {
-        font-size: 1rem; /* Ajustado para mobile */
+        font-size: 1.1rem;
     }
 
     .button {
         padding: 0.6rem 1.5rem;
         font-size: 1rem;
     }
-}
-
-/* Remove espaçamentos indesejados */
-body, html {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Evita barras de rolagem horizontais */
-}
-
-#header {
-    margin: 0;
-    padding: 0;
-}
-
-/* Se estiver usando um banner dentro de uma section/div: */
-.banner-container {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
 }
