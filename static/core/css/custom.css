@@ -357,7 +357,7 @@ em, i {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-/* Ajuste para a foto redonda centralizada */
+/* Ajuste para a foto redonda centralizada do pasted_content.txt */
 .image img[style*="border-radius: 50%"] {
     max-width: 150px !important; /* Reduz o tamanho máximo da imagem */
     margin: 0 auto;
@@ -366,7 +366,7 @@ em, i {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Classe para centralizar imagem redonda */
+/* Classe para centralizar imagem redonda do pasted_content.txt */
 .centered-round-image {
     display: block;
     margin: 0 auto;
@@ -376,7 +376,7 @@ em, i {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Profile photo styling */
+/* Estilo da foto de perfil do pasted_content.txt */
 .profile-photo {
     width: 200px;
     height: 200px;
@@ -387,6 +387,9 @@ em, i {
     border: 4px solid var(--primary-color);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
+
+
+
 
 /* === SEÇÕES (WRAPPER, BOX) === */
 /* Estilos para as seções gerais da página e caixas de conteúdo. */

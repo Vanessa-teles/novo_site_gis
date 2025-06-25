@@ -72,45 +72,51 @@ a:hover {
 
 /* CENTRALIZAÇÃO DO BOTÃO DA PÁGINA DE CONTATO */
 /* Estilo específico para centralizar botões de formulário de contato */
-.contact-form input[type="submit"],
-.contact-form .button {
-  display: block;
-  margin: 0 auto; /* Centraliza horizontalmente */
-  text-align: center;
-  width: auto; /* Remove largura total em desktop */
-  max-width: 300px; /* Define largura máxima */
+/* Seletor mais específico */
+#contact-section .contact-form input[type="submit"],
+#contact-section .contact-form .button {
+  display: block !important;
+  margin: 0 auto !important;
+  width: auto !important;
+  max-width: 300px !important;
 }
 
-/* Ajuste para a foto redonda centralizada do pasted_content.txt */
-.image img[style*="border-radius: 50%"] {
-    max-width: 150px !important; /* Reduz o tamanho máximo da imagem */
+/* Container da imagem (ESSENCIAL) */
+.image-container {
+    text-align: center; /* Fallback para métodos antigos */
+    width: 100%; /* Container deve ocupar largura */
     margin: 0 auto;
-    display: block;
-    border-radius: 50% !important;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px 0;
 }
 
-/* Classe para centralizar imagem redonda do pasted_content.txt */
-.centered-round-image {
-    display: block;
-    margin: 0 auto;
-    border-radius: 50%; /* Para garantir que seja redonda */
-    max-width: 250px; /* Ajuste o tamanho máximo conforme necessário */
-    height: auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Estilo da foto de perfil do pasted_content.txt */
+/* Estilo definitivo para imagens redondas */
 .profile-photo {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    display: block;
-    margin: 2em auto;
+    display: block; /* Mude para block ou inline-block */
+    margin: 2em auto; /* Centraliza horizontalmente */
     border: 4px solid var(--primary-color);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    
+    /* Garante que nenhum estilo pai sobrescreva */
+    float: none !important;
+    position: relative !important;
 }
+.profile-photo {
+    /* Force override framework styles */
+    margin: 2em auto !important;
+    display: block !important;
+    float: none !important;
+}
+@media (max-width: 768px) {
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+    }
+}
+
 /* Header Enhancements */
 /* Melhorias no cabeçalho */
 /* Header */
