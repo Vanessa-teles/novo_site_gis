@@ -1150,6 +1150,25 @@ body {
   margin-top: 0 !important;
 }
 
+/* Estilo para o título do banner */
+.banner-title {
+    /* Por padrão, em telas grandes, não quebra a linha */
+    white-space: nowrap;
+}
+
+/* Media Query para telas pequenas (mobile) */
+/* O valor 736px é um ponto de quebra comum em templates como o seu */
+@media screen and (max-width: 736px) {
+    .banner-title {
+        /* Em telas menores, permite que o texto quebre normalmente */
+        white-space: normal;
+        
+        /* Opcional: Reduzir um pouco o tamanho da fonte no mobile para um melhor ajuste */
+        font-size: 1.8em; /* Ajuste o valor conforme necessário */
+    }
+}
+
+
 /* COMENTÁRIOS FINAIS EXPLICATIVOS */
 /*
 RESUMO DAS ALTERAÇÕES FEITAS:
@@ -1184,3 +1203,4 @@ RESUMO DAS ALTERAÇÕES FEITAS:
 
 Todas as alterações mantêm a responsividade e compatibilidade com dispositivos móveis.
 */
+
